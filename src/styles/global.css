@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+    --color-PrussianBlue: #1D3557;
+}
+
+body{
+    background-color: #F8F9FA;
+}
+
+h1, h2{
+    font-family: 'Montserrat';
+}
+
+h3, p{
+    font-family: 'Segoe UI', sans-serif;
+}
