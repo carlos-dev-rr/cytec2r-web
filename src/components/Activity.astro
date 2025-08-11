@@ -1,0 +1,18 @@
+---
+const {title, date} = Astro.props;
+---
+<div class="aspect-square w-sm bg-white drop-shadow-2xl">
+    
+    <slot name="img"/>
+    
+    <div class=" bg-SoftTurquoise text-center p-3">
+        <div class="flex justify-center items-baseline gap-2">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>{date}</p>
+        </div>
+    </div>
+    <h3 class="text-center text-xl font-bold mt-3">{title}</h3>
+    <div class="p-5 text-justify">
+        <slot name="description" />
+    </div>
+</div>

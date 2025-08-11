@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Service from "../components/Service.astro";
+import Activity from "../components/Activity.astro";
 ---
 
 <!DOCTYPE html>
@@ -34,16 +35,42 @@ import Service from "../components/Service.astro";
 			<h1 class="text-6xl text-center text-PrussianBlue font-bold">Sobre Nosotros</h1>
 			<h2 class="text-2xl text-center">Nuestro equipo, tu aliado</h2>
 		</div>
-		<div class="max-w-xl flex flex-col items-center">
-			<img src="/src/img/nosotros.jpg" alt="empresarios" class="shadow rounded mb-5">
-			<p class="text-justify text-lg">
-				En CYTEC2R, somos una consultora tecnológica especializada en la ejecución de proyectos con 
-				máxima eficacia y precisión. Nos enfocamos en combinar experiencia, innovación y una red global 
-				de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
-				preparadas para el futuro.
-			</p>
-			<button class="bg-sky-300 border-2 border-sky-200 text-sky-950 p-1 rounded mt-5 cursor-pointer">Conócenos más</button>
+		<div class="flex gap-10">
+			<img src="/src/img/nosotros.jpg" alt="empresarios" class="object-cover shadow-lg rounded mb-5 max-w-xl">
+			<div >
+				<p class="text-justify text-lg max-w-lg">
+					En CYTEC2R, somos una consultora tecnológica especializada en la ejecución de proyectos con 
+					máxima eficacia y precisión. Nos enfocamos en combinar experiencia, innovación y una red global 
+					de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
+					preparadas para el futuro.
+				</p>
+				<button class="bg-sky-300 border-2 border-sky-200 text-sky-950 p-1 rounded mt-5 cursor-pointer font-bold">Conócenos más</button>
+			</div>
 		</div>
+
+	<section class="mt-20 w-full">
+		<div class="mb-10">
+			<h1 class="text-6xl text-center text-PrussianBlue font-bold">Actividades</h1>
+			<h2 class="text-2xl text-center">Impactando Positivamente</h2>
+		</div>
+		<div class="flex flex-wrap justify-around">
+			<Activity title="Diplomado en Gestión y Atención Perioperatoria" date="7 de enero de 2020">
+				<img src="/src/img/evento1.jpg" alt="event1" slot="img" class="object-cover w-full max-h-[290px]">
+				<p slot="description">
+					Como parte de nuestro compromiso con el desarrollo profesional en el sector salud, 
+					CYTEC2R participó en la organización y ejecución del primer Diplomado en Gestión y 
+					Atención Perioperatoria, dirigido a enfermeras del Hospital Brisas, en colaboración 
+					con la Universidad de Panamá.
+				</p>
+			</Activity>
+			<Activity title="Pendiente..." date="1 de julio de 2025">
+				<img src="/src/img/evento2.jpg" alt="event2" slot="img" class="object-cover">
+				<p slot="description">
+					Pendiente...
+				</p>
+			</Activity>
+		</div>
+		
 	</section>
 </body>
 </html>
