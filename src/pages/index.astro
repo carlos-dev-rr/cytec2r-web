@@ -15,7 +15,7 @@ import Service from "../components/Service.astro";
 <body>
     <Header />
 
-	<section class="services">
+	<section class="mb-20">
 		<div class="mt-10 mb-10">
 			<h1 class="text-6xl text-center text-PrussianBlue font-bold">Nuestros Servicios</h1>
 			<h2 class="text-2xl text-center">Soluciones especializadas para tu organización</h2>
@@ -29,5 +29,21 @@ import Service from "../components/Service.astro";
 		</div>
 	</section>
 	
+	<section class="flex flex-col items-center">
+		<div class="mt-10 mb-10">
+			<h1 class="text-6xl text-center text-PrussianBlue font-bold">Sobre Nosotros</h1>
+			<h2 class="text-2xl text-center">Nuestro equipo, tu aliado</h2>
+		</div>
+		<div class="max-w-xl flex flex-col items-center">
+			<img src="/src/img/nosotros.jpg" alt="empresarios" class="shadow rounded mb-5">
+			<p class="text-justify text-lg">
+				En CYTEC2R, somos una consultora tecnológica especializada en la ejecución de proyectos con 
+				máxima eficacia y precisión. Nos enfocamos en combinar experiencia, innovación y una red global 
+				de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
+				preparadas para el futuro.
+			</p>
+			<button class="bg-sky-300 border-2 border-sky-200 text-sky-950 p-1 rounded mt-5 cursor-pointer">Conócenos más</button>
+		</div>
+	</section>
 </body>
 </html>
