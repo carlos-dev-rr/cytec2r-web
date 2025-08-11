@@ -1,21 +1,11 @@
 ---
 import Contact from './Contact.astro';
 import '../styles/global.css';
-
-//<i class="fa-solid fa-bars text-3xl"></i> Menu bar
 ---
-<header class="flex flex-col">
+<header class="flex flex-col w-screen">
     <Contact />
-    <div class="flex justify-center bg-white p-2">
-        <div class="flex items-center justify-between w-3/4">
-            <img src="/src/img/logo.png" alt="logo" class="h-25">
-            <nav>
-                <ul class="flex [&>li>a]:inline-block [&>li>a]:px-4">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="/nosotros/">Nosotros</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="flex items-center justify-around w-full bg-white p-2">
+        <img src="/src/img/logo.png" alt="logo" class="w-[160px]">
+        <i class="fa-solid fa-bars text-3xl"></i>
     </div>
 </header>
