@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Service from "../components/Service.astro";
 ---
 
 <!DOCTYPE html>
@@ -13,5 +14,20 @@ import Header from "../components/Header.astro";
 </head>
 <body>
     <Header />
+
+	<section class="services">
+		<div class="section-title">
+			<h2>Nuestros Servicios</h2>
+			<h1>Soluciones especializadas para tu organización</h1>
+		</div>
+		<div class="flex justify-center gap-5 flex-wrap">
+			<Service name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
+			<Service name="Gestión de la Calidad" icon="fa-solid fa-star"/>
+			<Service name="Docencia" icon="fa-solid fa-chalkboard-user"/>
+			<Service name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
+			<Service name="Consultorías" icon="fa-solid fa-circle-info"/>
+		</div>
+	</section>
+	
 </body>
 </html>
