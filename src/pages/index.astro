@@ -1,22 +1,11 @@
 ---
-import Header from "../components/Header.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Service from "../components/Service.astro";
 import Activity from "../components/Activity.astro";
-import Footer from "../components/Footer.astro";
+
+const pageTitle = "Cytec2R";
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYTEC2R</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e4a8bbd630.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <Header />
-
+<BaseLayout pageTitle={pageTitle}>
 	<section class="mb-20">
 		<div class="mt-10 mb-10">
 			<h1 class="text-6xl text-center text-PrussianBlue font-bold">Nuestros Servicios</h1>
@@ -67,12 +56,13 @@ import Footer from "../components/Footer.astro";
 			<Activity title="Capacitación sobre Vigilancia pasiva y activa de la seguridad del paciente" date="1 de julio de 2025">
 				<img src="/src/img/evento2.jpg" alt="event2" slot="img" class="object-cover">
 				<p slot="description">
-					Pendiente...
+					capacitación sobre vigilancia activa y pasiva de la seguridad del paciente es fundamental para garantizar la seguridad y 
+					calidad de la atención en salud. La vigilancia activa implica una búsqueda proactiva de eventos adversos, mientras que la 
+					vigilancia pasiva se basa en la notificación espontánea de estos eventos. Esta capacitación promueve la sensibilización 
+					sobre la importancia de identificar las fortalezas y fallas del sistema para el desarrollo de culturas de mejora continua. 
+					En CYTEC2R estamos listos para acompañarte en este proceso.
 				</p>
 			</Activity>
 		</div>
 	</section>
-
-	<Footer />
-</body>
-</html>
+</BaseLayout>
