@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
 import Service from "../components/Service.astro";
 import Activity from "../components/Activity.astro";
 
 const pageTitle = "Cytec2R";
 ---
 <BaseLayout pageTitle={pageTitle}>
+	<Hero />
 	<section class="mb-20">
 		<div class="mt-10 mb-10">
 			<h1 class="text-6xl text-center text-PrussianBlue font-bold">Nuestros Servicios</h1>
