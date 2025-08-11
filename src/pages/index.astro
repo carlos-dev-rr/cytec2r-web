@@ -1,17 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
 import Service from "../components/Service.astro";
 import Activity from "../components/Activity.astro";
 
 const pageTitle = "Cytec2R";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<section class="mb-20">
-		<div class="my-10">
-			<h1 class="text-5xl text-center text-PrussianBlue font-bold">Nuestros Servicios</h1>
-			<h2 class="text-xl text-center">Soluciones especializadas para tu organización</h2>
-		</div>
+	<Section title="Nuestros Servicios" subtitle="Soluciones especializadas para tu organización">
 		<div class="flex justify-center gap-5 flex-wrap">
 			<Service name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
 			<Service name="Gestión de la Calidad" icon="fa-solid fa-star"/>
@@ -19,13 +15,8 @@ const pageTitle = "Cytec2R";
 			<Service name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
 			<Service name="Consultorías" icon="fa-solid fa-circle-info"/>
 		</div>
-	</section>
-	
-	<section>
-		<div class="my-10">
-			<h1 class="text-6xl text-center text-PrussianBlue font-bold">Sobre Nosotros</h1>
-			<h2 class="text-2xl text-center">Nuestro equipo, tu aliado</h2>
-		</div>
+	</Section>
+	<Section title="Sobre Nosotros" subtitle="Nuestro equipo, tu aliado">
 		<div>
 			<img src="/src/img/nosotros.jpg" alt="empresarios" class="">
 			<div >
@@ -38,12 +29,8 @@ const pageTitle = "Cytec2R";
 				<button class="bg-sky-300 border-2 border-sky-200 text-sky-950 p-1 rounded mt-5 cursor-pointer font-bold">Conócenos más</button>
 			</div>
 		</div>
-	</section>
-	<section class="mt-20 w-full">
-		<div class="mb-5">
-			<h1 class="text-6xl text-center text-PrussianBlue font-bold">Actividades</h1>
-			<h2 class="text-2xl text-center">Impactando Positivamente</h2>
-		</div>
+	</Section>
+	<Section title="Actividades" subtitle="Impactando Positivamente">
 		<div class="flex flex-wrap justify-around">
 			<Activity title="Diplomado en Gestión y Atención Perioperatoria" date="7 de enero de 2020">
 				<img src="/src/img/evento1.jpg" alt="event1" slot="img" class="object-cover w-full max-h-[290px]">
@@ -65,5 +52,5 @@ const pageTitle = "Cytec2R";
 				</p>
 			</Activity>
 		</div>
-	</section>
+	</Section>
 </BaseLayout>
