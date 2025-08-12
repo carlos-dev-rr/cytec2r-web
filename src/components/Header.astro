@@ -2,6 +2,7 @@
 import Contact from './Contact.astro';
 import '../styles/global.css';
 import Hero from './Hero.astro';
+import Navigation from './Navigation.astro';
 
 const { url } = Astro;
 const isHome = url.pathname === '/';
@@ -10,7 +11,8 @@ const isHome = url.pathname === '/';
     <Contact />
     <div class="flex items-center justify-around w-full bg-white p-2">
         <img src="/src/img/logo.png" alt="logo" class="w-[160px]">
-        <i class="fa-solid fa-bars text-3xl"></i>
+        <span class="sm:hidden"><i id="burguer-menu" class="fa-solid fa-bars text-3xl"></i></span>
+        <Navigation />
     </div>
 
     {isHome &&(<Hero />)}
