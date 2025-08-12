@@ -7,53 +7,57 @@ import Activity from "../components/Activity.astro";
 const pageTitle = "Cytec2R";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<Section title="Nuestros Servicios" subtitle="Soluciones especializadas para tu organización">
-		<div class="flex justify-center gap-5 flex-wrap">
-			<Service name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
-			<Service name="Gestión de la Calidad" icon="fa-solid fa-star"/>
-			<Service name="Docencia" icon="fa-solid fa-chalkboard-user"/>
-			<Service name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
-			<Service name="Consultorías" icon="fa-solid fa-circle-info"/>
-		</div>
-	</Section>
-	<Section title="Sobre Nosotros" subtitle="Nuestro equipo, tu aliado">
-		<div class="flex flex-col items-center">
-			<img src="/src/img/nosotros.jpg" alt="empresarios" class="w-[80%] shadow-lg rounded-xl">
-			<div class="flex flex-col items-center max-w-[80%] mt-6">
-				<p class="text-justify text-base leading-relaxed sm:text-lg">
-					En CYTEC2R, somos una consultora tecnológica especializada en la ejecución de proyectos con 
-					máxima eficacia y precisión. Nos enfocamos en combinar experiencia, innovación y una red global 
-					de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
-					preparadas para el futuro.
-				</p>
-				<button class="bg-sky-300 border-2 border-sky-200 text-sky-950 px-4 py-1 mt-5 cursor-pointer font-bold rounded-full
-								sm:text-xl">
-					Conócenos más
-				</button>
+	<section class="flex flex-col items-center gap-35 my-10 mx-6">
+		<Section title="Nuestros Servicios" subtitle="Soluciones especializadas para tu organización">
+			<div class="flex justify-center gap-5 flex-wrap items-stretch">
+				<Service name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
+				<Service name="Gestión de la Calidad" icon="fa-solid fa-star"/>
+				<Service name="Docencia" icon="fa-solid fa-chalkboard-user"/>
+				<Service name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
+				<Service name="Consultorías" icon="fa-solid fa-circle-info"/>
 			</div>
-		</div>
-	</Section>
-	<Section title="Actividades" subtitle="Impactando Positivamente">
-		<div class="flex flex-wrap justify-around">
-			<Activity title="Diplomado en Gestión y Atención Perioperatoria" date="7 de enero de 2020">
-				<img src="/src/img/evento1.jpg" alt="event1" slot="img" class="object-cover w-full max-h-[290px]">
-				<p slot="description">
-					Como parte de nuestro compromiso con el desarrollo profesional en el sector salud, 
-					CYTEC2R participó en la organización y ejecución del primer Diplomado en Gestión y 
-					Atención Perioperatoria, dirigido a enfermeras del Hospital Brisas, en colaboración 
-					con la Universidad de Panamá.
-				</p>
-			</Activity>
-			<Activity title="Capacitación sobre Vigilancia pasiva y activa de la seguridad del paciente" date="1 de julio de 2025">
-				<img src="/src/img/evento2.jpg" alt="event2" slot="img" class="object-cover">
-				<p slot="description">
-					capacitación sobre vigilancia activa y pasiva de la seguridad del paciente es fundamental para garantizar la seguridad y 
-					calidad de la atención en salud. La vigilancia activa implica una búsqueda proactiva de eventos adversos, mientras que la 
-					vigilancia pasiva se basa en la notificación espontánea de estos eventos. Esta capacitación promueve la sensibilización 
-					sobre la importancia de identificar las fortalezas y fallas del sistema para el desarrollo de culturas de mejora continua. 
-					En CYTEC2R estamos listos para acompañarte en este proceso.
-				</p>
-			</Activity>
-		</div>
-	</Section>
+		</Section>
+		<Section title="Sobre Nosotros" subtitle="Nuestro equipo, tu aliado">
+			<div class="flex flex-col items-center lg:flex-row lg:gap-7">
+				<img src="/src/img/nosotros.jpg" alt="empresarios" class="w-[80%] max-w-[442px] shadow-lg rounded-xl md:max-w-[60%] lg:max-w-[50%]">
+				<div class="flex flex-col items-center max-w-[80%] mt-6">
+					<p class="text-justify text-base leading-relaxed lg:text-lg lg:leading-loose">
+						En CYTEC2R, somos una consultora tecnológica especializada en la ejecución de proyectos con 
+						máxima eficacia y precisión. Nos enfocamos en combinar experiencia, innovación y una red global 
+						de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
+						preparadas para el futuro.
+					</p>
+					<button class="bg-sky-300 border-2 border-sky-200 text-sky-950 px-4 py-1 mt-5 cursor-pointer font-bold rounded-full
+									sm:text-base
+									lg:text-lg">
+						Conócenos más
+					</button>
+				</div>
+			</div>
+		</Section>
+		<Section title="Actividades" subtitle="Impactando Positivamente">
+			<div class="flex flex-wrap justify-around items-center sm:items-stretch sm:gap-2">
+				<Activity title="Diplomado en Gestión y Atención Perioperatoria" date="7 de enero de 2020">
+					<img src="/src/img/evento1.jpg" alt="event1" slot="img" class="object-cover w-full h-full">
+					<p slot="description">
+						Como parte de nuestro compromiso con el desarrollo profesional en el sector salud, 
+						CYTEC2R participó en la organización y ejecución del primer Diplomado en Gestión y 
+						Atención Perioperatoria, dirigido a enfermeras del Hospital Brisas, en colaboración 
+						con la Universidad de Panamá.
+					</p>
+				</Activity>
+				<Activity title="Capacitación sobre Vigilancia pasiva y activa de la seguridad del paciente" date="1 de julio de 2025">
+					<img src="/src/img/evento2.jpg" alt="event2" slot="img" class="object-cover w-full h-full">
+					<p slot="description">
+						Capacitación sobre vigilancia activa y pasiva de la seguridad del paciente es fundamental para garantizar la seguridad y 
+						calidad de la atención en salud. La vigilancia activa implica una búsqueda proactiva de eventos adversos, mientras que la 
+						vigilancia pasiva se basa en la notificación espontánea de estos eventos. Esta capacitación promueve la sensibilización 
+						sobre la importancia de identificar las fortalezas y fallas del sistema para el desarrollo de culturas de mejora continua. 
+						En CYTEC2R estamos listos para acompañarte en este proceso.
+					</p>
+				</Activity>
+			</div>
+		</Section>
+	</section>
+	
 </BaseLayout>

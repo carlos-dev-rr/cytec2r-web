@@ -1,9 +1,9 @@
 ---
 const {name, icon} = Astro.props;
 ---
-<div class="size-45 bg-white mb-3 drop-shadow-lg rounded p-4 text-center md:size-60">
+<div class="flex flex-col gap-5 w-1/2 h-auto bg-white mb-3 drop-shadow-lg rounded p-4 text-center sm:w-[200px] lg:max-w-[280px]">
     <div>
-        <i class={`${icon} aspect-square bg-SoftTurquoise p-5 text-4xl rounded-full md:text-5xl`}></i>
+        <i class={`${icon} bg-SoftTurquoise p-5 text-4xl rounded-full md:text-5xl`}></i>
     </div>
-    <h3 class="mt-4 font-medium italic md:text-lg">{name}</h3>
+    <h3 class="items-start font-medium italic md:text-lg lg:text-xl">{name}</h3>
 </div>
