@@ -7,7 +7,7 @@ import Navigation from './Navigation.astro';
 const { url } = Astro;
 const isHome = url.pathname === '/';
 ---
-<header class={`flex flex-col overflow-visible w-full ${ isHome ? 'h-[700px]' : 'h-auto' } max-h-screen ${ isHome ? 'lg:min-h-screen' : 'lg:h-auto'}`}>
+<header class={`flex flex-col overflow-visible w-full ${ isHome ? 'min-h-[700px]' : 'h-auto' } max-h-screen ${ isHome ? 'lg:min-h-screen' : 'lg:h-auto'}`}>
     <Contact />
     <div class="flex items-center justify-around w-full bg-white p-2">
         <img src="/src/img/logo.png" alt="logo" class="w-[160px]">
@@ -16,4 +16,4 @@ const isHome = url.pathname === '/';
     </div>
 
     {isHome &&(<Hero />)}
-</header> 
+</header>  
