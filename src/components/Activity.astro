@@ -1,7 +1,7 @@
 ---
 const {title, date} = Astro.props;
 ---
-<div class="flex flex-col items-center w-[80%] max-w-[300px] bg-white drop-shadow-xl rounded-md my-7 lg:max-w-[400px]">
+<div class="activity-card flex flex-col items-center min-h-[444px] w-[80%] max-w-[300px] bg-white drop-shadow-xl rounded-md my-7 lg:max-w-[400px]">
     <div class="w-full h-[200px]">
         <slot name="img"/>
     </div>
@@ -12,9 +12,9 @@ const {title, date} = Astro.props;
         </div>
     </div>
     <h3 class="flex-grow text-center text-xl font-bold mt-3 mx-5 lg:text-2xl">{title}</h3>
-    <div class="p-5 text-justify hidden">
+    <div class="description-container p-5 text-justify hidden text-sm">
         <slot name="description"/>
     </div>
-    <button class="bg-sky-100 border-2 border-sky-200 text-sky-950 text-sm  px-4 py-1 my-5 cursor-pointer font-bold rounded-full w-1/2
+    <button class="activity-button bg-sky-100 border-2 border-sky-200 text-sky-950 text-sm  px-4 py-1 my-5 cursor-pointer font-bold rounded-full w-1/2
                     hover:animate-bounceIcon hover:bg-sky-200 hover:duration-300">Más información</button>
-</div>
+</div> 

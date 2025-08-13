@@ -18,4 +18,4 @@ const observerCards = new IntersectionObserver(entries => {
 
 delay = 0.2;
 const serviceCard = document.querySelectorAll('.service-card')
-serviceCard.forEach(card => observerCards.observe(card));
+serviceCard.forEach(card => observerCards.observe(card)); 
