@@ -10,7 +10,7 @@ const isHome = url.pathname === '/';
 <header class={`flex flex-col overflow-visible w-full ${ isHome ? 'min-h-[700px]' : 'h-auto' } max-h-screen ${ isHome ? 'lg:min-h-screen' : 'lg:h-auto'}`}>
     <Contact />
     <div class="flex items-center justify-around w-full bg-white p-2">
-        <img src="/public/img/logo.png" alt="logo" class="w-[160px]">
+        <img src="/img/logo.png" alt="logo" class="w-[160px]">
         <span class="sm:hidden"><i id="burguer-menu" class="fa-solid fa-bars text-3xl cursor-pointer"></i></span>
         <Navigation />
     </div>
