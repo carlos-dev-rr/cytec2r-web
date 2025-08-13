@@ -1,18 +1,21 @@
 ---
 const { url } = Astro;
 const pathname = url.pathname;
+// sm:flex [&>li>a]:sm:inline-block [&>li>a]:sm:mx-6 [&>li>a]:sm:px-2
 ---
-<nav id="nav-links" class="hidden sm:block">
-    <ul class="flex [&>li>a]:inline-block [&>li>a]:mx-6 [&>li>a]:px-2">
-        <li class={`relative ${pathname === '/' && 'currentPage'}`}>
-            <a href="/" class="w-auto">Inicio</a>
+<nav id="nav-links" class="hidden absolute top-26 left-0 m-0 z-50 text-center bg-sky-50 shadow-2xl shadow-GunmetalGray w-full 
+                           sm:static sm:flex sm:justify-around sm:w-auto sm:bg-transparent sm:shadow-none">
+    <ul class="p-5 animate-menuIn [&>li>a]:block 
+                sm:flex sm:p-0 sm:animate-none sm:[&>li>a]:inline-block sm:[&>li>a]:mx-6 sm:[&>li>a]:px-2">
+        <li class={`py-2 relative ${pathname === '/' && 'currentPage'} cursor-pointer`}>
+            <a href="/">Inicio</a>
             <span></span>
         </li>
-        <li class={`relative ${pathname === '/servicios/' && 'currentPage'}`}>
+        <li class={`py-2 relative ${pathname === '/servicios/' && 'currentPage'} cursor-pointer`}>
             <a href="#">Servicios</a>
             <span></span>
         </li>
-        <li class={`relative ${pathname === '/nosotros/' && 'currentPage'}`}>
+        <li class={`py-2 relative ${pathname === '/nosotros/' && 'currentPage'} cursor-pointer`}>
             <a href="/nosotros/">Nosotros</a>
             <span></span>
         </li>

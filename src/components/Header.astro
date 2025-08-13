@@ -11,9 +11,9 @@ const isHome = url.pathname === '/';
     <Contact />
     <div class="flex items-center justify-around w-full bg-white p-2">
         <img src="/src/img/logo.png" alt="logo" class="w-[160px]">
-        <span class="sm:hidden"><i id="burguer-menu" class="fa-solid fa-bars text-3xl"></i></span>
+        <span class="sm:hidden"><i id="burguer-menu" class="fa-solid fa-bars text-3xl cursor-pointer"></i></span>
         <Navigation />
     </div>
 
     {isHome &&(<Hero />)}
-</header>  
+</header>   
