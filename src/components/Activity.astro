@@ -5,7 +5,7 @@ const {title, date} = Astro.props;
     <div class="w-full h-[200px]">
         <slot name="img"/>
     </div>
-    <div class=" bg-SoftTurquoise text-center p-3 w-full">
+    <div class=" bg-sky-800 text-sky-50 text-center p-3 w-full">
         <div class="flex justify-center items-baseline gap-2">
             <i class="fa-solid fa-calendar-days"></i>
             <p>{date}</p>
@@ -15,5 +15,6 @@ const {title, date} = Astro.props;
     <div class="p-5 text-justify hidden">
         <slot name="description"/>
     </div>
-    <button class="bg-LightSkyBlue border-1 border-sky-200 text-sm text-sky-950 px-4 py-1 my-5 cursor-pointer font-bold rounded-full w-1/2">Más información</button>
+    <button class="bg-sky-100 border-2 border-sky-200 text-sky-950 text-sm  px-4 py-1 my-5 cursor-pointer font-bold rounded-full w-1/2
+                    hover:animate-bounceIcon hover:bg-sky-200 hover:duration-300">Más información</button>
 </div>
