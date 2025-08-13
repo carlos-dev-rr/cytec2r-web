@@ -4,6 +4,7 @@ const observerOptions ={
     rootMargin: '0px',
     threshold: 0.95
 }
+
 const observerCards = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const { isIntersecting } = entry
