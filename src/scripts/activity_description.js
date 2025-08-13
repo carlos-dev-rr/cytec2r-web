@@ -6,6 +6,7 @@ activities.forEach(activity => {
     button.addEventListener('click', ()=> {
         let content = button.textContent
         description.classList.toggle('hidden')
+        button.classList.toggle('buttonOn')
         content == 'Más información' ? content = 'Minimizar' : content = 'Más información'
         button.textContent = content
     })

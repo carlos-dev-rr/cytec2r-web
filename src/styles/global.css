@@ -83,6 +83,12 @@ h3, p{
     font-family: 'Segoe UI', sans-serif;
 }
 
+.buttonOn{
+  background-color: var(--color-sky-800);
+  color: var(--color-sky-50);
+  border-color: var(--color-sky-900);
+}
+
 /* Estilo base para el subrayado (span dentro de li) */
 #nav-links ul li span {
   position: absolute;
