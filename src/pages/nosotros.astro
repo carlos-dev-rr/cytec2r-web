@@ -4,47 +4,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Nosotros - C2R";
 ---
 <BaseLayout pageTitle={pageTitle}>
-   <Persona name="Carlos Alberto Rodriguez Patiño" rol="Co-fundador" url="https://uk.linkedin.com/">
-      <img src="/src/img/persona1.jpg" alt="empresario-1" slot="img" class="w-full rounded-xl shadow-md shadow-GunmetalGray">
-      <p slot="description">
-         Carlos A. Rodríguez P. es Ingeniero en Informática por la Universidad de Panamá, con una Maestría en Dirección de Negocios 
-         con Especialización en Estrategias Gerenciales y un Postgrado en Alta Gerencia por la Universidad Tecnológica de Panamá. 
-         Su formación se complementa con un Postgrado en Docencia Superior y una especialización internacional en Gobierno Electrónico 
-         cursada en Corea del Sur.
-      </p>
-      <p slot="description">
-         Ha ocupado cargos estratégicos en el sector público y académico, destacándose como Director Ejecutivo Nacional de Innovación y 
-         Transformación en la Caja de Seguro Social, Coordinador de Innovación en el Ministerio de Educación, y Director de Informática en 
-         la Universidad de Panamá. También ha sido consultor para la Embajada de los Estados Unidos (NAS) y ha liderado áreas tecnológicas 
-         en instituciones como la Procuraduría de la Administración y la Secretaría del Consejo Nacional de Transparencia.
-      </p>
-      <p slot="description">
-         Su compromiso con la innovación y la gestión pública ha sido reconocido oficialmente mediante la Resolución N°.084-01 del 31 de 
-         julio de 2001, por su participación en la elaboración y divulgación de la Ley 38 de julio de 2000.
-      </p>
-   </Persona>
-   <Persona name="Hazel Nynoschka Ramos Thomas" rol="Co-fundadora" url="https://uk.linkedin.com/">
-      <img src="/src/img/persona2.jpg" alt="empresario-2" slot="img" class="w-full rounded-xl shadow-md shadow-GunmetalGray">
-      <p slot="description">
-         Hazel N. Ramos Thomas es una enfermera con una trayectoria destacada en gestión de calidad, liderazgo clínico y docencia. 
-         Egresada de la Universidad de Panamá como Licenciada en Ciencias de la Enfermería, ha complementado su formación con una 
-         Maestría en Dirección de Negocios con énfasis en Estrategias Gerenciales, dos postgrados (en Alta Gerencia y Docencia Superior) 
-         y una especialización como enfermera quirúrgica.
-      </p>
-      <p slot="description">
-         Cuenta con múltiples certificaciones internacionales en normas ISO, Lean Six Sigma, auditoría clínica, seguridad del paciente y 
-         gestión de riesgos.
-      </p>
-      <p slot="description">
-         A lo largo de más de dos décadas de experiencia, ha liderado iniciativas de alto impacto en instituciones públicas y privadas. 
-         Fue Sub-Coordinadora Nacional de Gestión de Calidad en la Caja de Seguro Social, donde diseñó e implementó normas de seguridad 
-         quirúrgica, sistemas de reporte de eventos adversos y procesos clave para la acreditación hospitalaria. Su experiencia también 
-         incluye consultorías en estándares internacionales de calidad, gestión de quirófanos y diseño de indicadores clínicos.
-      </p>
-      <p slot="description">
-         Además de su rol como gestora, ha sido formadora y docente en universidades e instituciones de salud, promoviendo la mejora continua 
-         a través de la educación, la auditoría y la implementación de protocolos clínicos.
-      </p>
-
-   </Persona>
+   <div class="text-center mx-5 my-6 p-2 border-b-1 border-b-sky-700 md:p-4 lg:pb-6 lg:mb-15">
+      <h1 class="text-5xl text-PrussianBlue font-bold leading-12 md:text-6xl lg:text-7xl">Conoce Nuestro Equipo</h1>
+   </div>
+   <section>
+      <Persona name="Carlos Alberto Rodriguez Patiño" rol="Co-fundador" url="https://www.linkedin.com/in/carlos-aberto-rodriguez-2320a936/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+            <img src="/src/img/persona1.jpg" alt="empresario-1" slot="img" class="w-full rounded-xl shadow-md shadow-GunmetalGray">
+            <p slot="description">
+               Carlos A. Rodríguez P. es Ingeniero en Informática por la Universidad de Panamá, con una Maestría en Dirección de Negocios 
+               con Especialización en Estrategias Gerenciales y un Postgrado en Alta Gerencia por la Universidad Tecnológica de Panamá. 
+               Su formación se complementa con un Postgrado en Docencia Superior y una especialización internacional en Gobierno Electrónico 
+               cursada en Corea del Sur.
+            </p>
+            <p slot="description">
+               Ha ocupado cargos estratégicos en el sector público y académico, destacándose como Director Ejecutivo Nacional de Innovación y 
+               Transformación en la Caja de Seguro Social, Coordinador de Innovación en el Ministerio de Educación, y Director de Informática en 
+               la Universidad de Panamá. También ha sido consultor para la Embajada de los Estados Unidos (NAS) y ha liderado áreas tecnológicas 
+               en instituciones como la Procuraduría de la Administración y la Secretaría del Consejo Nacional de Transparencia.
+            </p>
+            <p slot="description">
+               Su compromiso con la innovación y la gestión pública ha sido reconocido oficialmente mediante la Resolución N°.084-01 del 31 de 
+               julio de 2001, por su participación en la elaboración y divulgación de la Ley 38 de julio de 2000.
+            </p>
+         </Persona>
+         <Persona name="Hazel Nynoschka Ramos Thomas" rol="Co-fundadora" url="https://www.linkedin.com/in/hazel-nynoshcka-ramos-thomas-97a0bb66/?originalSubdomain=pa">
+            <img src="/src/img/persona2.jpg" alt="empresario-2" slot="img" class="w-full rounded-xl shadow-md shadow-GunmetalGray">
+            <p slot="description">
+               Hazel N. Ramos Thomas es una enfermera con una trayectoria destacada en gestión de calidad, liderazgo clínico y docencia. 
+               Egresada de la Universidad de Panamá como Licenciada en Ciencias de la Enfermería, ha complementado su formación con una 
+               Maestría en Dirección de Negocios con énfasis en Estrategias Gerenciales, dos postgrados (en Alta Gerencia y Docencia Superior) 
+               y una especialización como enfermera quirúrgica.
+            </p>
+            <p slot="description">
+               Cuenta con múltiples certificaciones internacionales en normas ISO, Lean Six Sigma, auditoría clínica, seguridad del paciente y 
+               gestión de riesgos.
+            </p>
+            <p slot="description">
+               A lo largo de más de dos décadas de experiencia, ha liderado iniciativas de alto impacto en instituciones públicas y privadas. 
+               Fue Sub-Coordinadora Nacional de Gestión de Calidad en la Caja de Seguro Social, donde diseñó e implementó normas de seguridad 
+               quirúrgica, sistemas de reporte de eventos adversos y procesos clave para la acreditación hospitalaria. Su experiencia también 
+               incluye consultorías en estándares internacionales de calidad, gestión de quirófanos y diseño de indicadores clínicos.
+            </p>
+            <p slot="description">
+               Además de su rol como gestora, ha sido formadora y docente en universidades e instituciones de salud, promoviendo la mejora continua 
+               a través de la educación, la auditoría y la implementación de protocolos clínicos.
+            </p>
+         </Persona>
+   </section>
+   
 </BaseLayout>
