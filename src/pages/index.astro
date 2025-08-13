@@ -10,12 +10,15 @@ const pageTitle = "Cytec2R";
 	<section class="flex flex-col items-center gap-35 my-10 mx-6">
 		<Section title="Nuestros Servicios" subtitle="Soluciones especializadas para tu organización">
 			<div class="flex justify-center gap-5 flex-wrap items-stretch">
-				<Service name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
-				<Service name="Gestión de la Calidad" icon="fa-solid fa-star"/>
-				<Service name="Docencia" icon="fa-solid fa-chalkboard-user"/>
-				<Service name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
-				<Service name="Consultorías" icon="fa-solid fa-circle-info"/>
+					<Service name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
+					<Service name="Gestión de la Calidad" icon="fa-solid fa-star"/>
+					<Service name="Docencia" icon="fa-solid fa-chalkboard-user"/>
+					<Service name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
+					<Service name="Consultorías" icon="fa-solid fa-circle-info"/>
 			</div>
+			<script>
+				import '../scripts/observer.js';	
+			</script>
 		</Section>
 		<Section title="Sobre Nosotros" subtitle="Nuestro equipo, tu aliado">
 			<div class="flex flex-col items-center lg:flex-row lg:gap-7">
@@ -28,6 +31,7 @@ const pageTitle = "Cytec2R";
 						preparadas para el futuro.
 					</p>
 					<button class="bg-sky-300 border-2 border-sky-200 text-sky-950 px-4 py-1 mt-5 cursor-pointer font-bold rounded-full
+									hover:animate-bounceIcon
 									sm:text-base
 									lg:text-lg">
 						Conócenos más
@@ -59,5 +63,4 @@ const pageTitle = "Cytec2R";
 			</div>
 		</Section>
 	</section>
-	
 </BaseLayout>

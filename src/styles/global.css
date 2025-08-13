@@ -6,6 +6,55 @@
     --color-GunmetalGray: #343A40;
     --color-VividSkyBlue: #00B4FF;
     --color-LightSkyBlue: #6CD4FF ;
+
+
+    --animate-titleIn: titleIn 1s ease-out forwards;
+    @keyframes titleIn {
+        0% { opacity: 0; transform: translateY(-30px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    --animate-textIn: textIn 0.8s ease-out forwards;
+    @keyframes textIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+    }
+
+    --animate-buttonIn: buttonIn 0.8s ease-out forwards;
+    @keyframes buttonIn {
+        0% { opacity: 0; transform: scale(0.9); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+
+  --animate-bounceIcon: bounceIcon 0.5s ease-in-out;
+    @keyframes bounceIcon {
+        0%, 100% {
+        transform: translateY(0);
+        }
+        50% {
+        transform: translateY(-5px);
+        }
+    }
+
+  --animate-fill: fillButton 1s ease forwards;
+  @keyframes fillButton {
+    0% {
+      background-color:transparent;
+    }
+    100% {
+      background-color: var(--color-VividSkyBlue);
+    }
+  }
+
+  --animate-underlineSlide: underlineSlide 0.3s ease forwards;
+    @keyframes underlineSlide {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
 }
 
 body{
@@ -18,4 +67,26 @@ h1, h2{
 
 h3, p{
     font-family: 'Segoe UI', sans-serif;
+}
+
+/* Estilo base para el subrayado (span dentro de li) */
+#nav-links ul li span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.5px;
+  background-color: #2563eb; /* Tailwind blue-600 */
+  width: 0;
+  pointer-events: none;
+}
+
+/* Cuando el enlace (a) se hace hover, animamos el span */
+#nav-links ul li a:hover + span {
+  animation: var(--animate-underlineSlide);
+}
+
+.currentPage{
+    background-color: #eee;
+    border-radius: 5px;
+    font-weight: 700;
 }

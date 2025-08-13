@@ -1,9 +1,20 @@
 ---
+const { url } = Astro;
+const pathname = url.pathname;
 ---
 <nav id="nav-links" class="hidden sm:block">
-    <ul class="flex [&>li>a]:inline-block [&>li>a]:px-4">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="/nosotros/">Nosotros</a></li>
+    <ul class="flex [&>li>a]:inline-block [&>li>a]:mx-6 [&>li>a]:px-2">
+        <li class={`relative ${pathname === '/' && 'currentPage'}`}>
+            <a href="/" class="w-auto">Inicio</a>
+            <span></span>
+        </li>
+        <li class={`relative ${pathname === '/servicios/' && 'currentPage'}`}>
+            <a href="#">Servicios</a>
+            <span></span>
+        </li>
+        <li class={`relative ${pathname === '/nosotros/' && 'currentPage'}`}>
+            <a href="/nosotros/">Nosotros</a>
+            <span></span>
+        </li>
     </ul>
 </nav>
