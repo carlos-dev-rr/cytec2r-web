@@ -1,0 +1,19 @@
+---
+const {name, rol, url} = Astro.props;
+---
+<section class="flex flex-wrap justify-center gap-5 mt-20 sm:gap-10">
+    <div class="flex flex-col items-center gap-2 w-[65%] max-w-[228px] ">
+        <slot name="img" />
+        <div class="flex flex-col items-center">
+        <h4 class="text-2xl text-center font-bold text-GunmetalGray">{name}</h4>
+        <h5>{rol}</h5>
+        </div>
+        <a href={url}><i class="fa-brands fa-linkedin text-PrussianBlue text-3xl animate-titleIn"></i></a>
+    </div>
+    <div class="flex flex-col flex-grow items-center gap-5 text-xs text-GunmetalGray text-justify leading-relaxed w-[80%] max-w-[400px] mx-5
+                sm:max-w-[45%]
+                md:text-base
+                xl:text-lg">
+        <slot name="description">
+    </div>
+</section>
