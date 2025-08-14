@@ -1,0 +1,10 @@
+---
+const {title} = Astro.props;
+---
+<div class="card-ref bg-white p-3 mb-7 rounded-2xl shadow-md shadow-GunmetalGray flex-none w-full">
+    <h4 class="text-GunmetalGray font-extrabold">{title}</h4>
+    <button class="card-button-ref text-amber-500 font-semibold underline mt-2">Más información</button>
+    <div class="card-content-ref hidden mt-3 animate-fadeIn">
+        <slot />
+    </div>
+</div>

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
-import Service from "../components/Service.astro";
+import IconCard from "../components/IconCard.astro";
 import Activity from "../components/Activity.astro";
 
 const pageTitle = "Cytec2R";
@@ -10,11 +10,11 @@ const pageTitle = "Cytec2R";
 	<section class="flex flex-col items-center gap-35 my-10 mx-6">
 		<Section title="Nuestros Servicios" subtitle="Soluciones especializadas para tu organización">
 			<div class="flex justify-center gap-5 flex-wrap items-stretch">
-					<Service name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
-					<Service name="Gestión de la Calidad" icon="fa-solid fa-star"/>
-					<Service name="Docencia" icon="fa-solid fa-chalkboard-user"/>
-					<Service name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
-					<Service name="Consultorías" icon="fa-solid fa-circle-info"/>
+					<IconCard name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
+					<IconCard name="Gestión de la Calidad" icon="fa-solid fa-star"/>
+					<IconCard name="Docencia" icon="fa-solid fa-chalkboard-user"/>
+					<IconCard name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
+					<IconCard name="Consultorías" icon="fa-solid fa-circle-info"/>
 			</div>
 			<script>
 				import '../scripts/observer.js';	

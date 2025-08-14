@@ -1,0 +1,22 @@
+---
+const {name, icon, urlImg} = Astro.props;
+const hasIcon = typeof icon === "string" && icon.trim().length > 0;
+const hasUrlImg = typeof urlImg === "string" && urlImg.trim().length > 0;
+---
+<div class="service-card flex flex-col gap-5 h-auto bg-white mb-3 drop-shadow-lg rounded p-4 text-center">
+    {hasIcon && ( 
+        <div>
+            <i class={`${icon} bg-cyan-900 text-amber-100 p-5 text-4xl rounded-full md:text-5xl`}></i>
+        </div>
+    )}
+    
+    {hasUrlImg && (
+        <div class="flex justify-center">
+            <img src={urlImg} alt="" class="w-1/2 text"/>
+        </div>
+    )}
+    <div>
+        <h3 class="items-start font-medium italic md:text-lg lg:text-xl">{name}</h3>
+        <slot name="short-content" />
+    </div>
+</div>
