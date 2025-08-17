@@ -2,10 +2,10 @@
 const {title} = Astro.props;
 ---
 
-<div class="mx-5 mt-5 mb-15"> 
-    <h3 class="items-start font-medium leading-relaxed text-PrussianBlue md:text-lg lg:text-xl">{title}</h3>
-    <hr>
-    <div class="mt-3 text-sm text-justify leading-relaxed">
+<div class="mx-5 mt-5 mb-15 w-full lg:w-[1024px]"> 
+    <h3 class="items-start font-medium leading-relaxed text-PrussianBlue sm:text-lg lg:text-3xl">{title}</h3>
+    <hr class="mb-7">
+    <div class="mt-3 text-sm text-justify leading-relaxed lg:text-base">
         <slot />
     </div>
 </div>

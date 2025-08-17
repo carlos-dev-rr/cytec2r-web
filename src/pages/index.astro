@@ -6,16 +6,19 @@ import Activity from "../components/Activity.astro";
 
 const pageTitle = "Cytec2R";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
 	<section class="flex flex-col items-center gap-35 my-10 mx-6">
 		<Section title="Nuestros Servicios" subtitle="Soluciones especializadas para tu organización">
-			<div class="flex justify-center gap-5 flex-wrap items-stretch">
-					<IconCard name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
-					<IconCard name="Gestión de la Calidad" icon="fa-solid fa-star"/>
-					<IconCard name="Docencia" icon="fa-solid fa-chalkboard-user"/>
-					<IconCard name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
-					<IconCard name="Consultorías" icon="fa-solid fa-circle-info"/>
-			</div>
+			<section class="flex flex-wrap justify-center gap-5 [&>div]:w-[200px] [&>div]:h-[200px] 
+							md:[&>div]:h-[230px]
+							">
+				<IconCard name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
+				<IconCard name="Gestión de la Calidad" icon="fa-solid fa-star"/>
+				<IconCard name="Docencia" icon="fa-solid fa-chalkboard-user"/>
+				<IconCard name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
+				<IconCard name="Consultorías" icon="fa-solid fa-circle-info"/>
+			</section>
 			<script>
 				import '../scripts/observer.js';	
 			</script>
@@ -26,7 +29,8 @@ const pageTitle = "Cytec2R";
 				<div class="flex flex-col flex-grow max-w-[80%] items-center mt-6 md:max-w-[45%]">
 					<p class="text-justify text-sm leading-relaxed 
 							sm:text-base
-							lg:text-lg lg:leading-loose">
+							lg:text-lg lg:leading-loose
+							xl:text-xl">
 						En CYTEC2R, somos una consultora tecnológica especializada en la ejecución de proyectos con 
 						máxima eficacia y precisión. Nos enfocamos en combinar experiencia, innovación y una red global 
 						de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
@@ -35,14 +39,15 @@ const pageTitle = "Cytec2R";
 					<a href="/nosotros/" class="bg-sky-100 border-2 border-sky-200 text-sky-950 px-4 py-1 mt-5 cursor-pointer font-bold rounded-full
 									hover:animate-bounceIcon hover:bg-sky-200 hover:duration-300
 									sm:text-base
-									lg:text-lg">
+									lg:text-lg
+									xl:text-xl">
 						Conócenos más
 					</a>
 				</div>
 			</div>
 		</Section>
 		<Section title="Actividades" subtitle="Impactando Positivamente">
-			<div class="flex flex-wrap justify-around items-center sm:items-stretch sm:gap-2">
+			<section class="flex flex-wrap justify-around items-center sm:gap-5  sm:[&>div]:min-h-[444px] sm:items-start">
 				<Activity title="Diplomado en Gestión y Atención Perioperatoria" date="7 de enero de 2020">
 					<img src="/img/evento1.jpg" alt="event1" slot="img" class="object-cover w-full h-full">
 					<p slot="description" class="leading-loose">
@@ -65,7 +70,7 @@ const pageTitle = "Cytec2R";
 				<script>
 					import "../scripts/activity_description.js";
 				</script>
-			</div>
+			</section>
 		</Section>
 	</section>
 </BaseLayout>

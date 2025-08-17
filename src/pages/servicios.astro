@@ -8,14 +8,13 @@ import IconCard from "../components/IconCard.astro"
 
 <BaseLayout>
     <PageTitle title="Servicios" />
-    <section class="mx-5 text-sm text-justify">
+    <section class="mx-5 mb-15 text-sm text-justify sm:text-base lg:text-xl lg:mx-15">
         <p>
             En Cytec2R, ofrecemos soluciones integrales para fortalecer la gestión de calidad hospitalaria y la seguridad del paciente, 
             alineadas con normativas nacionales e internacionales.
         </p>
-        <p class="font-semibold">Nuestros servicios incluyen:</p>
     </section>
-    <section>
+    <section class="flex flex-col items-center mx-5 lg:mx-15">
         <ServiceSection title="1. Asistencia y Asesoría en Sistemas de Gestión de Calidad Hospitalaria">
             <p>
                 Acompañamos a las instituciones de salud en el desarrollo, implementación y mejora continua de sistemas de gestión de 
@@ -24,11 +23,11 @@ import IconCard from "../components/IconCard.astro"
         </ServiceSection>
         <ServiceSection title="2. Capacitación y Aplicación de Estándares de la Joint Commission International (JCI) – 8ª Edición">
             <p>
-                Brindamos formación y soporte en la interpretación, implementación y evaluación de los estándares JCI, <strong>incluyendo:</strong>
+                Brindamos formación y soporte en la interpretación, implementación y evaluación de los estándares JCI, incluyendo:
             </p>
             <section class="flex flex-col mt-7">
                 <Card title="Sección II – Estándares centrados en el paciente">
-                    <ul>
+                    <ul class="list-disc ml-5">
                         <li>ACC – Acceso a la atención y continuidad de la misma</li>
                         <li>AOP – Evaluación de pacientes</li>
                         <li>ASC – Anestesia y atención quirúrgica</li>
@@ -39,7 +38,7 @@ import IconCard from "../components/IconCard.astro"
                     </ul>
                 </Card>
                 <Card title="Sección III – Estándares de gestión centrados en la organización">
-                    <ul>
+                    <ul class="list-disc ml-5">
                         <li>FMS – Administración y seguridad de las instalaciones</li>
                         <li>GLD – Órgano de Gobierno, liderazgo y dirección</li>
                         <li>HCT – Tecnología de la salud</li>
@@ -50,12 +49,12 @@ import IconCard from "../components/IconCard.astro"
                     </ul>
                 </Card>
                 <Card title="Sección IV – Impacto en la Salud Mundial">
-                    <ul>
+                    <ul class="list-disc ml-5">
                         <li>GHI – Impacto en la salud mundial</li>
                     </ul>
                 </Card>
                 <Card title="Sección V – Hospital Docente">
-                    <ul>
+                    <ul class="list-disc ml-5">
                         <li>HR – Programas de investigación con sujetos humanos</li>
                         <li>MPE – Educación de profesionales médicos</li>
                     </ul>
@@ -67,7 +66,7 @@ import IconCard from "../components/IconCard.astro"
                 <p>Creación, control y mejora de la documentación institucional.</p>
             </Card>
             <Card title="3.2 Vigilancia Activa">
-                <ul>
+                <ul class="list-disc ml-5">
                     <li>Auditorías</li>
                     <li>Tracers</li>
                     <li>Paciente misterioso</li>
@@ -76,7 +75,7 @@ import IconCard from "../components/IconCard.astro"
                 </ul>
             </Card>
             <Card title="3.3 Vigilancia Pasiva">
-                <ul>
+                <ul class="list-disc ml-5">
                     <li>Reporte de incidentes, eventos adversos y centinela</li>
                     <li>Gestión de quejas de pacientes</li>
                     <li>Trazabilidad de dispositivos médicos implantables</li>
@@ -88,9 +87,9 @@ import IconCard from "../components/IconCard.astro"
         </ServiceSection>
         <ServiceSection title="4. Programas de Reconocimiento y Premiaciones">
             <p>Fomentamos la cultura de la calidad mediante reconocimientos a la excelencia:</p>
-            <section class="mt-5 flex flex-wrap gap-5">
+            <section class="mt-5 flex flex-wrap justify-center gap-5 [&>div]:w-[200px] lg:[&>div]:w-[250px]">
                 <IconCard name="Premio “Gestión cálida de la calidad”" urlImg="/img/PGCC.png">
-                <p slot="short-content" class="text-xs mt-1">Dirigido a líderes organizacionales.</p>
+                    <p slot="short-content" class="text-xs mt-1">Dirigido a líderes organizacionales.</p>
                 </IconCard>
                 <IconCard name="Premio “Referente de calidad en seguridad del paciente”" urlImg="/img/PRCS.png">
                     <p slot="short-content" class="text-xs mt-1">Para equipos operativos destacados.</p>

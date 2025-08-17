@@ -11,12 +11,20 @@ const hasUrlImg = typeof urlImg === "string" && urlImg.trim().length > 0;
     )}
     
     {hasUrlImg && (
-        <div class="flex justify-center">
-            <img src={urlImg} alt="" class="w-1/2 text"/>
+        <div class="flex justify-center aspect-auto
+                    sm:h-[100px]
+                    md:h-[120px] 
+                    lg:h-[140px]">
+            <img src={urlImg} alt="" class="w-1/2 md:w-[130px]"/>
         </div>
     )}
     <div>
-        <h3 class="items-start font-medium italic md:text-lg lg:text-xl">{name}</h3>
-        <slot name="short-content" />
+        <h3 class="items-start font-bold italic
+                    sm:h-[65px] 
+                    md:h-[70px] md:text-md 
+                    lg:h-[90px] lg:text-lg">{name}</h3>
+        <div class="lg:[&>p]:text-sm xl:[&>p]:text-lg">
+            <slot name="short-content" />
+        </div>
     </div>
 </div>
