@@ -4,9 +4,11 @@ import ServiceSection from "../components/ServiceSection.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Card from "../components/Card.astro"
 import IconCard from "../components/IconCard.astro"
+
+const pageTitle = "Servicios - C2R";
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
     <PageTitle title="Servicios" />
     <section class="mx-5 mb-15 text-sm text-justify sm:text-base lg:text-xl lg:mx-15">
         <p>
