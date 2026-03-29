@@ -1,0 +1,16 @@
+---
+const {iconClass, iconBgColor, iconColor, title, description} = Astro.props;
+---
+
+<div class="bg-surface-container-lowest w-[300px] min-h-[280px] rounded-xl drop-shadow-surface-container-low shadow-md flex justify-center items-center">
+    <div class="w-[85%] h-[85%] flex flex-col justify-between items-start">
+        <div class={`${iconBgColor} w-[50px] h-[50px] rounded-2xl flex items-center justify-center`}>
+            <i class={`${iconClass} text-xl ${iconColor}`}></i>
+        </div>
+        <div class="flex flex-col gap-3">
+            <h2 class="text-lg text-primary-blue font-medium">{title}</h2>
+            <p class="text-sm text-gunmetal-gray">{description}</p>
+        </div>
+        <a href="/servicios/" class="text-sm text-secondary flex justify-center items-center gap-2">Ver más <i class="fa-solid fa-chevron-right text-[8px]"></i></a>
+    </div>
+</div>

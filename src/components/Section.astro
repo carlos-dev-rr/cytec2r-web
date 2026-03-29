@@ -1,11 +1,13 @@
 ---
-const {title, subtitle} = Astro.props;
+const {title, subtitle, backgroundColor, titleColor} = Astro.props;
 ---
 
-<section class="max-w-5xl">
-    <div class="mb-6 lg:mb-15">
-        <h1 class="text-5xl text-center text-PrussianBlue font-bold leading-14 md:text-6xl lg:text-7xl">{title}</h1>
-		<h2 class="text-xl text-center md:text-2xl">{subtitle}</h2>
+<section class={`w-[100dvw] flex flex-col align-middle items-center ${backgroundColor}`}>
+    <div class="max-w-[90%] py-10">
+        <div class="mb-5 lg:mb-15">
+            <h2 class="text-sm text-center text-secondary md:text-2xl">{subtitle}</h2>
+            <h1 class={`text-3xl text-center ${titleColor} font-semibold md:text-6xl lg:text-7xl`}>{title}</h1>
+        </div>
+        <slot />
     </div>
-    <slot />
 </section>

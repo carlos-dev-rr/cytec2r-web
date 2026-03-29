@@ -1,9 +1,8 @@
 ---
 const { url } = Astro;
 const pathname = url.pathname;
-// sm:flex [&>li>a]:sm:inline-block [&>li>a]:sm:mx-6 [&>li>a]:sm:px-2
 ---
-<nav id="nav-links" class="hidden absolute top-26 left-0 m-0 z-50 text-center bg-sky-50 shadow-2xl shadow-GunmetalGray w-full 
+<nav id="nav-links" class="hidden absolute top-10 left-0 m-0 z-50 text-center bg-sky-50 shadow-2xl shadow-GunmetalGray w-full 
                            sm:static sm:flex sm:justify-around sm:w-auto sm:bg-transparent sm:shadow-none">
     <ul class="p-5 animate-menuIn [&>li>a]:block
                 sm:flex sm:p-0 sm:animate-none sm:[&>li]:mx-3 sm:[&>li>a]:inline-block sm:[&>li>a]:w-full sm:[&>li>a]:px-2">
@@ -17,6 +16,14 @@ const pathname = url.pathname;
         </li>
         <li class={`py-2 relative ${pathname === '/nosotros/' && 'currentPage'} cursor-pointer`}>
             <a href="/nosotros/">Nosotros</a>
+            <span></span>
+        </li>
+        <li class={`py-2 relative ${pathname === '/recursos/' && 'currentPage'} cursor-pointer`}>
+            <a href="/recursos/">Recursos</a>
+            <span></span>
+        </li>
+        <li class={`py-2 relative ${pathname === '/contacto/' && 'currentPage'} cursor-pointer`}>
+            <a href="/contacto/">Contacto</a>
             <span></span>
         </li>
     </ul>

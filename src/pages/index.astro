@@ -1,33 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/Section.astro';
-import IconCard from "../components/IconCard.astro";
 import Activity from "../components/Activity.astro";
+import ServiceCard from '../components/ServiceCard.astro';
+import ListRowWithIcon from '../components/ListRowWithIcon.astro'
+import Hero from '../components/Hero.astro';
 
 const pageTitle = "Cytec2R";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<section class="flex flex-col items-center gap-35 my-10 mx-6">
-		<Section title="Nuestros Servicios" subtitle="Soluciones especializadas para tu organización">
-			<section class="flex flex-wrap justify-center gap-5 [&>div]:w-[200px] [&>div]:h-[200px] 
-							md:[&>div]:h-[230px]
-							">
-				<IconCard name="Seguridad del Paciente" icon="fa-solid fa-shield"/>
-				<IconCard name="Gestión de la Calidad" icon="fa-solid fa-star"/>
-				<IconCard name="Docencia" icon="fa-solid fa-chalkboard-user"/>
-				<IconCard name="Tecnología de Información y Comunicaciones" icon="fa-solid fa-globe"/>
-				<IconCard name="Consultorías" icon="fa-solid fa-circle-info"/>
-			</section>
-			<script>
-				import '../scripts/observer.js';	
-			</script>
-		</Section>
-		<Section title="Sobre Nosotros" subtitle="Nuestro equipo, tu aliado">
+	<Hero />
+	<section class="flex flex-col items-center my-10 mx-6">
+		<Section title="Arquitectos de la Excelencia Operativa" subtitle="QUIÉNES SOMOS">
 			<div class="flex flex-wrap justify-center items-center gap-4 lg:flex-row">
-				<img src="/img/nosotros.jpg" alt="empresarios" class="w-[80%] max-w-[442px] shadow-lg rounded-xl md:max-w-[50%]">
-				<div class="flex flex-col flex-grow max-w-[80%] items-center mt-6 md:max-w-[45%]">
-					<p class="text-justify text-sm leading-relaxed 
+				<!-- <img src="/img/nosotros.jpg" alt="empresarios" class="w-[80%] max-w-[442px] shadow-lg rounded-xl md:max-w-[50%]"> -->
+				<div class="flex flex-col flex-grow max-w-[95%] items-center mt-6 md:max-w-[45%]">
+					<p class="text-justify text-md text- leading-relaxed 
 							sm:text-base
 							lg:text-lg lg:leading-loose
 							xl:text-xl">
@@ -36,8 +25,8 @@ const pageTitle = "Cytec2R";
 						de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
 						preparadas para el futuro.
 					</p>
-					<a href="/nosotros/" class="bg-sky-100 border-2 border-sky-200 text-sky-950 px-4 py-1 mt-5 cursor-pointer font-bold rounded-full
-									hover:animate-bounceIcon hover:bg-sky-200 hover:duration-300
+					<a href="/nosotros/" class="bg-tertiary-blue border-2 border-primary text-neutral-white px-4 py-1 mt-5 cursor-pointer font-bold rounded-full
+									hover:animate-bounceIcon hover:bg-primary-blue hover:text-on-primary-container hover:duration-300
 									sm:text-base
 									lg:text-lg
 									xl:text-xl">
@@ -46,7 +35,48 @@ const pageTitle = "Cytec2R";
 				</div>
 			</div>
 		</Section>
-		<Section title="Actividades" subtitle="Impactando Positivamente">
+
+		<Section title="Soluciones integrales para la mejora continua" subtitle="Servicios Clave" backgroundColor="bg-surface-container-low">
+			<section class="flex flex-wrap justify-center gap-5 
+							">
+				<ServiceCard iconClass="fa-solid fa-building-flag" iconBgColor="bg-primary-fixed" iconColor="text-primary" 
+					title="Asesoría en Sistemas de Gestión"
+					description="Implementación robusta de marcos normativos para optimizar procesos internos." />
+				<ServiceCard iconClass="fa-solid fa-graduation-cap" iconBgColor="bg-secondary-fixed" iconColor="text-secondary" 
+					title="Capacitación JCI" 
+					description="Preparacion ténica avanzada para certificaciones de la Joint Commission International."/>
+				<ServiceCard iconClass="fa-solid fa-shield-heart" iconBgColor="bg-primary-fixed" iconColor="text-primary" 
+					title="Calidad y Seguridad"
+					description="Programas diseñados para mitigar riesos y proteger la integraidad del paciente." />
+				<ServiceCard iconClass="fa-solid fa-ranking-star" iconBgColor="bg-secondary-fixed" iconColor="text-secondary" 
+					title="Mediciones y Rankings"
+					description="Análisis de datos críticos para posicionar su institución en estándares globales." />
+			</section>
+			<script>
+				import '../scripts/observer.js';	
+			</script>
+		</Section>
+		<Section title="El Diferencial Cytec2R" titleColor="text-primary-fixed-dim" backgroundColor="bg-primary">
+			<div class="py-8 my-0 mx-auto flex flex-col items-center w-[90%] gap-10">
+				<ListRowWithIcon 
+					iconClass="fa-solid fa-check-double" iconColor="text-neutral-white"
+					title="Cumplimiento Regulatorio" 
+					description="Alineación estricta con normativas locales e internacionales sin fricciones operativas." 
+				/>
+				<ListRowWithIcon 
+					iconClass="fa-regular fa-eye" iconColor="text-neutral-white"
+					title="Enfoque Holíóstico" 
+					description="No solo vemos procesos; entedemos el impacto humano en cada eslabón de la cadena de salud." 
+				/>
+				<ListRowWithIcon 
+					iconClass="fa-solid fa-building-circle-check" iconColor="text-neutral-white"
+					title="Experiencia Comprobada" 
+					description="Casos de éxito documentados en las redes hospitalarias más importantes de la región." 
+				/>
+			</div>
+		</Section>
+		
+		<Section title="Impactando Positivamente" subtitle="Actividades">
 			<section class="flex flex-wrap justify-around items-center sm:gap-5  sm:[&>div]:min-h-[444px] sm:items-start">
 				<Activity title="Diplomado en Gestión y Atención Perioperatoria" date="7 de enero de 2020">
 					<img src="/img/evento1.jpg" alt="event1" slot="img" class="object-cover w-full h-full">

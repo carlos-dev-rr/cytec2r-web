@@ -1,19 +1,18 @@
 ---
-import Contact from './Contact.astro';
 import '../styles/global.css';
-import Hero from './Hero.astro';
 import Navigation from './Navigation.astro';
 
 const { url } = Astro;
-const isHome = url.pathname === '/';
 ---
-<header class={`flex flex-col overflow-visible w-full ${ isHome ? 'min-h-[700px]' : 'h-auto' } max-h-screen ${ isHome ? 'lg:min-h-screen' : 'lg:h-auto'}`}>
-    <Contact />
-    <div class="flex items-center justify-around w-full bg-white p-2">
-        <img src="/img/logo.png" alt="logo" class="w-[160px]">
-        <span class="sm:hidden"><i id="burguer-menu" class="fa-solid fa-bars text-3xl cursor-pointer"></i></span>
+<header class={`flex flex-col overflow-visible w-full`}>
+    <div class="flex items-center justify-between w-full bg-white p-2 px-5">
+        <div>
+            <h1 class="text-primary-blue font-semibold">CYTEC2R</h1>
+        </div>
+        <div class="flex items-center gap-5">
+            <p class="sm:hidden bg-primary-blue text-neutral-white font-medium text-sm p-1 rounded-md">Contacto</p>
+            <span class="sm:hidden"><i id="burguer-menu" class="fa-solid fa-bars text-md cursor-pointer"></i></span>
+        </div>
         <Navigation />
     </div>
-
-    {isHome &&(<Hero />)}
 </header>   
