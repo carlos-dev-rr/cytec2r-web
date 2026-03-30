@@ -1,30 +1,16 @@
 ---
-const { url } = Astro;
+const { url} = Astro;
 const pathname = url.pathname;
+import NavigationItem from "./NavigationItem.astro";
 ---
 <nav id="nav-links" class="hidden absolute top-21 left-0 m-0 z-50 text-center bg-primary-fixed shadow-2xl shadow-gunmetal-gray w-full 
                            sm:static sm:flex sm:justify-around sm:w-auto sm:bg-transparent sm:shadow-none">
     <ul class="p-5 animate-menuIn [&>li>a]:block
-                sm:flex sm:p-0 sm:animate-none sm:[&>li]:mx-3 sm:[&>li>a]:inline-block sm:[&>li>a]:w-full sm:[&>li>a]:px-2">
-        <li class={`relative ${pathname === '/' && 'currentPage'} hover:bg-primary-container hover:rounded-lg hover:text-neutral-white`}>
-            <a href="/" class="py-2 cursor-pointer">Inicio</a>
-            <span></span>
-        </li>
-        <li class={`py-2 relative ${pathname === '/servicios/' && 'currentPage'} cursor-pointer hover:bg-primary-container hover:rounded-lg hover:text-neutral-white`}>
-            <a href="/servicios/">Servicios</a>
-            <span></span>
-        </li>
-        <li class={`py-2 relative ${pathname === '/nosotros/' && 'currentPage'} cursor-pointer hover:bg-primary-container hover:rounded-lg hover:text-neutral-white`}>
-            <a href="/nosotros/">Nosotros</a>
-            <span></span>
-        </li>
-        <!-- <li class={`py-2 relative ${pathname === '/recursos/' && 'currentPage'} cursor-pointer`}>
-            <a href="/recursos/">Recursos</a>
-            <span></span>
-        </li> -->
-        <li class={`py-2 relative ${pathname === '/contacto/' && 'currentPage'} cursor-pointer hover:bg-primary-container hover:rounded-lg hover:text-neutral-white`}>
-            <a href="/contacto/">Contacto</a>
-            <span></span>
-        </li>
+                sm:flex sm:p-0 sm:animate-none 
+                sm:[&>li]:mx-3">
+        <NavigationItem name="Inicio" moveTo="/" />
+        <NavigationItem name="Servicios" moveTo="/servicios/"/>
+        <NavigationItem name="Nosotros" moveTo="/nosotros/"/>
+        <NavigationItem name="Contacto" moveTo="/contacto/"/>
     </ul>
 </nav>

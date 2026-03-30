@@ -1,100 +1,211 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Section from '../components/Section.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
 import Activity from "../components/Activity.astro";
-import ServiceCard from '../components/ServiceCard.astro';
-import ListRowWithIcon from '../components/ListRowWithIcon.astro'
-import Hero from '../components/HeroBanners/Hero.astro';
-
+import ServiceCard from "../components/ServiceCard.astro";
+import ListRowWithIcon from "../components/ListRowWithIcon.astro";
+import Hero from "../components/HeroBanners/Hero.astro";
+import HeroDesktop from "../components/heroBanners/HeroDesktop.astro";
 const pageTitle = "Cytec2R";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<Hero />
-	<section class="flex flex-col items-center my-10">
-		<Section title="Arquitectos de la Excelencia Operativa" subtitle="QUIÉNES SOMOS">
-			<div class="flex flex-wrap justify-center items-center gap-4 lg:flex-row">
-				<!-- <img src="/img/nosotros.jpg" alt="empresarios" class="w-[80%] max-w-[442px] shadow-lg rounded-xl md:max-w-[50%]"> -->
-				<div class="flex flex-col flex-grow max-w-[95%] items-center mt-6 md:max-w-[75%]">
-					<p class="text-justify text-md text- leading-relaxed 
+  <div class="block md:hidden">
+    <Hero />
+  </div>
+
+  <div class="hidden md:block">
+    <HeroDesktop />
+  </div>
+
+  <section class="flex flex-col items-center my-10">
+    <Section
+      title="Arquitectos de la Excelencia Operativa"
+      subtitle="QUIÉNES SOMOS"
+    >
+      <div class="flex flex-wrap justify-center items-center gap-4 lg:flex-row">
+        <div
+          class="flex flex-col flex-grow max-w-[95%] items-center mt-6 md:max-w-[75%]"
+        >
+          <p
+            class="text-justify text-md text- leading-relaxed
 							sm:text-base
 							lg:text-lg lg:leading-loose"
-					>
-						En CYTEC2R, somos una consultora tecnológica especializada en la ejecución de proyectos con 
-						máxima eficacia y precisión. Nos enfocamos en combinar experiencia, innovación y una red global 
-						de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
-						preparadas para el futuro.
-					</p>
-					<a href="/nosotros/" class="mt-5 primary-gradient text-on-primary font-headline font-bold py-4 px-8 rounded-xl shadow-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 w-full sm:w-auto">
-						Conócenos más
-						<span><i class="fa-solid fa-arrow-right"></i></span>
-					</a>
-				</div>
-			</div>
-		</Section>
+          >
+            En CYTEC2R, somos una consultora tecnológica especializada en la
+            ejecución de proyectos con máxima eficacia y precisión. Nos
+            enfocamos en combinar experiencia, innovación y una red global de
+            profesionales para ofrecer soluciones tecnológicas alineadas con los
+            desafíos del presente y preparadas para el futuro.
+          </p>
+          <a
+            href="/nosotros/"
+            class="mt-5 primary-gradient text-on-primary font-headline font-bold py-4 px-8 rounded-xl shadow-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 w-full sm:w-auto"
+          >
+            Conócenos más
+            <span><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </Section>
 
-		<Section title="Soluciones integrales para la mejora continua" subtitle="Servicios Clave" backgroundColor="bg-surface-container-low">
-			<section class="flex flex-wrap justify-center gap-5 
-							">
-				<ServiceCard iconClass="fa-solid fa-building-flag" iconBgColor="bg-primary-fixed" iconColor="text-primary" 
-					title="Asesoría en Sistemas de Gestión"
-					description="Implementación robusta de marcos normativos para optimizar procesos internos." />
-				<ServiceCard iconClass="fa-solid fa-graduation-cap" iconBgColor="bg-secondary-fixed" iconColor="text-secondary" 
-					title="Capacitación JCI" 
-					description="Preparacion ténica avanzada para certificaciones de la Joint Commission International."/>
-				<ServiceCard iconClass="fa-solid fa-shield-heart" iconBgColor="bg-primary-fixed" iconColor="text-primary" 
-					title="Calidad y Seguridad"
-					description="Programas diseñados para mitigar riesos y proteger la integraidad del paciente." />
-				<ServiceCard iconClass="fa-solid fa-ranking-star" iconBgColor="bg-secondary-fixed" iconColor="text-secondary" 
-					title="Mediciones y Rankings"
-					description="Análisis de datos críticos para posicionar su institución en estándares globales." />
-			</section>
-		</Section>
-		<Section title="El Diferencial Cytec2R" titleColor="text-primary-fixed-dim" backgroundColor="bg-primary">
-			<div class="py-8 my-0 mx-auto flex flex-col items-center w-[90%] gap-10">
-				<ListRowWithIcon 
-					iconClass="fa-solid fa-check-double" iconColor="text-neutral-white"
-					title="Cumplimiento Regulatorio" 
-					description="Alineación estricta con normativas locales e internacionales sin fricciones operativas." 
-				/>
-				<ListRowWithIcon 
-					iconClass="fa-regular fa-eye" iconColor="text-neutral-white"
-					title="Enfoque Holíóstico" 
-					description="No solo vemos procesos; entedemos el impacto humano en cada eslabón de la cadena de salud." 
-				/>
-				<ListRowWithIcon 
-					iconClass="fa-solid fa-building-circle-check" iconColor="text-neutral-white"
-					title="Experiencia Comprobada" 
-					description="Casos de éxito documentados en las redes hospitalarias más importantes de la región." 
-				/>
-			</div>
-		</Section>
-		
-		<Section title="Impactando Positivamente" subtitle="Actividades">
-			<section class="flex flex-wrap justify-around items-center sm:gap-5  sm:[&>div]:min-h-[444px] sm:items-start">
-				<Activity title="Diplomado en Gestión y Atención Perioperatoria" date="7 de enero de 2020">
-					<img src="/img/evento1.jpg" alt="event1" slot="img" class="object-cover w-full h-full">
-					<p slot="description" class="leading-loose">
-						Como parte de nuestro compromiso con el desarrollo profesional en el sector salud, 
-						CYTEC2R participó en la organización y ejecución del primer Diplomado en Gestión y 
-						Atención Perioperatoria, dirigido a enfermeras del Hospital Brisas, en colaboración 
-						con la Universidad de Panamá.
-					</p>
-				</Activity>
-				<Activity title="Capacitación sobre Vigilancia pasiva y activa de la seguridad del paciente" date="1 de julio de 2025">
-					<img src="/img/evento2.jpg" alt="event2" slot="img" class="object-cover w-full h-full">
-					<p slot="description" class="leading-loose">
-						Capacitación sobre vigilancia activa y pasiva de la seguridad del paciente es fundamental para garantizar la seguridad y 
-						calidad de la atención en salud. La vigilancia activa implica una búsqueda proactiva de eventos adversos, mientras que la 
-						vigilancia pasiva se basa en la notificación espontánea de estos eventos. Esta capacitación promueve la sensibilización 
-						sobre la importancia de identificar las fortalezas y fallas del sistema para el desarrollo de culturas de mejora continua. 
-						En CYTEC2R estamos listos para acompañarte en este proceso.
-					</p>
-				</Activity>
-				<script>
-					import "../scripts/activity_description.js";
-				</script>
-			</section>
-		</Section>
-	</section>
+    <Section
+      title="Soluciones integrales para la mejora continua"
+      subtitle="Servicios Clave"
+      backgroundColor=""
+    >
+      <section class="flex flex-wrap justify-center gap-5">
+        <ServiceCard
+          iconClass="fa-solid fa-laptop-code"
+          iconBgColor="bg-primary-fixed"
+          iconColor="text-primary"
+          title="Asesoría en Sistemas de Gestión"
+          description="Optimización de procesos institucionales mediante la implementación de software estratégico para un control total y eficiente."
+        />
+        <ServiceCard
+          iconClass="fa-solid fa-graduation-cap"
+          iconBgColor="bg-secondary-fixed"
+          iconColor="text-secondary"
+          title="Capacitación JCI"
+          description="Preparacion ténica avanzada para certificaciones de la Joint Commission International."
+        />
+        <ServiceCard
+          iconClass="fa-solid fa-shield-heart"
+          iconBgColor="bg-primary-fixed"
+          iconColor="text-primary"
+          title="Calidad y Seguridad"
+          description="Programas diseñados para mitigar riesos y proteger la integraidad del paciente."
+        />
+        <ServiceCard
+          iconClass="fa-solid fa-ranking-star"
+          iconBgColor="bg-secondary-fixed"
+          iconColor="text-secondary"
+          title="Mediciones y Rankings"
+          description="Análisis de datos críticos para posicionar su institución en estándares globales."
+        />
+      </section>
+    </Section>
+    <Section
+      title="El Diferencial Cytec2R"
+      titleColor="text-primary-fixed-dim"
+      backgroundColor="bg-primary"
+    >
+      <div
+        class="py-8 my-0 mx-auto flex flex-col items-center w-[90%] gap-10 md:gap-20"
+      >
+        <ListRowWithIcon
+          iconClass="fa-solid fa-check-double"
+          iconSize="text-2xl"
+          iconColor="text-neutral-white"
+          title="Cumplimiento Regulatorio"
+          titleSize="md:text-2xl"
+          description="Alineación estricta con normativas locales e internacionales sin fricciones operativas."
+          descriptionSize="md:text-lg"
+        />
+        <ListRowWithIcon
+          iconClass="fa-regular fa-eye"
+          iconSize="text-2xl"
+          iconColor="text-neutral-white"
+          title="Enfoque Holíóstico"
+          titleSize="md:text-2xl"
+          description="No solo vemos procesos; entedemos el impacto humano en cada eslabón de la cadena de salud."
+          descriptionSize="md:text-lg"
+        />
+        <ListRowWithIcon
+          iconClass="fa-solid fa-building-circle-check"
+          iconSize="text-2xl"
+          iconColor="text-neutral-white"
+          title="Experiencia Comprobada"
+          titleSize="md:text-2xl"
+          description="Casos de éxito documentados en las redes hospitalarias más importantes de la región."
+          descriptionSize="md:text-lg"
+        />
+      </div>
+    </Section>
+
+    <Section title="Impactando Positivamente" subtitle="Actividades">
+      <section
+        class="flex flex-wrap justify-around items-center sm:gap-5 sm:[&>div]:min-h-[444px] sm:items-start"
+      >
+        <Activity
+          title="Diplomado en Gestión y Atención Perioperatoria"
+          date="7 de enero de 2020"
+        >
+          <img
+            src="/img/evento1.jpg"
+            alt="event1"
+            slot="img"
+            class="object-cover w-full h-full"
+          />
+          <p slot="description" class="leading-loose">
+            Como parte de nuestro compromiso con el desarrollo profesional en el
+            sector salud, CYTEC2R participó en la organización y ejecución del
+            primer Diplomado en Gestión y Atención Perioperatoria, dirigido a
+            enfermeras del Hospital Brisas, en colaboración con la Universidad
+            de Panamá.
+          </p>
+        </Activity>
+        <Activity
+          title="Capacitación sobre Vigilancia pasiva y activa de la seguridad del paciente"
+          date="1 de julio de 2025"
+        >
+          <img
+            src="/img/evento2.jpg"
+            alt="event2"
+            slot="img"
+            class="object-cover w-full h-full"
+          />
+          <p slot="description" class="leading-loose">
+            Capacitación sobre vigilancia activa y pasiva de la seguridad del
+            paciente es fundamental para garantizar la seguridad y calidad de la
+            atención en salud. La vigilancia activa implica una búsqueda
+            proactiva de eventos adversos, mientras que la vigilancia pasiva se
+            basa en la notificación espontánea de estos eventos. Esta
+            capacitación promueve la sensibilización sobre la importancia de
+            identificar las fortalezas y fallas del sistema para el desarrollo
+            de culturas de mejora continua. En CYTEC2R estamos listos para
+            acompañarte en este proceso.
+          </p>
+        </Activity>
+        <script>
+          import "../scripts/activity_description.js";
+        </script>
+      </section>
+    </Section>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-8">
+      <div
+        class="primary-gradient from-blue-700 to-indigo-800 rounded-[3rem] p-12 lg:p-24 text-center text-white relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
+        >
+          <svg class="w-full h-full fill-current">
+            <circle cx="20" cy="20" r="30"></circle>
+            <circle cx="80" cy="80" r="40"></circle>
+          </svg>
+        </div>
+        <div class="relative z-10">
+          <h2
+            class="font-headline text-4xl lg:text-5xl font-extrabold mb-8 tracking-tighter"
+          >
+            ¿Listo para elevar los estándares de su institución?
+          </h2>
+          <p class="text-xl opacity-90 max-w-2xl mx-auto mb-12">
+            Hablemos sobre cómo nuestras soluciones personalizadas pueden
+            fortalecer la seguridad de sus pacientes hoy mismo.
+          </p>
+          <a
+            href="/contacto/"
+            class="inline-block bg-surface-container-lowest text-primary px-10 py-5 rounded-2xl font-headline font-bold text-xl hover:scale-105 active:scale-95 transition-all shadow-2xl"
+          >
+            Solicitar una Consultoría
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

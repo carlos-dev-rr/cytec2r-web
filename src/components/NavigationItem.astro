@@ -1,0 +1,9 @@
+---
+const {name, moveTo} = Astro.props;
+const { url } = Astro;
+const pathname = url.pathname;
+---
+
+<li>
+  <a href={moveTo} class={`p-2 relative ${pathname === moveTo && "currentPage"} hover:bg-on-primary-fixed-variant hover:rounded-lg hover:text-neutral-white`}>{name}</a>
+</li>

@@ -11,16 +11,16 @@ const {
 
     titleSize="text-lg",
     descriptionSize="text-sm",
-    iconSize="",
+    iconSize="text-md",
 
     titleWeight="font-medium"
     } = Astro.props;
 ---
-<div class="flex justify-between gap-5">
-    <div class={`flex items-center justify-center ${iconColor} w-[70px] h-[40px] rounded-full border-1 ${borderColor}`}>
+<div class="flex items-center justify-between gap-5">
+    <div class={`flex-none flex  items-center justify-center ${iconColor} w-[70px] h-[70px] rounded-full border-1 ${borderColor}`}>
         <i class={`${iconClass} ${iconSize}`}></i>
     </div>
-    <div>
+    <div class="grow">
         <h2 class={`${titleSize} ${titleColor} ${titleWeight}`}>{title}</h2>
         <p class={`${descriptionSize} ${descriptionColor} text-justify`}>{description}</p>
     </div>

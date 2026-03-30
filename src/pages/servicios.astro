@@ -3,18 +3,16 @@
 import ServiceSection from "../components/ServiceSection.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Card from "../components/Card.astro"
+import SectionHero from "../components/HeroBanners/SectionHero.astro"
 import IconCard from "../components/IconCard.astro"
-import SectionHero from "../components/heroBanners/SectionHero.astro";
-
 const pageTitle = "Servicios - C2R";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <SectionHero 
-        title="Nuestros Servicios Integrales" 
+        title="Nuestros Servicios" 
         subtitle="Excelencia Operativa" 
-        description="Ofrecemos soluciones integrales para fortalecer la gestión de calidad hospitalaria y la seguridad del paciente, 
-            alineadas con normativas nacionales e internacionales." 
+        description="Ofrecemos soluciones integrales para fortalecer la gestión de calidad y la seguridad operativa. Optimizamos procesos institucionales bajo normativas nacionales e internacionales, aplicables al sector salud y organizaciones de alto impacto." 
         imgPath="/img/servicios_hero_background.webp"
     />
     <section class="flex flex-col gap-20 my-10">
