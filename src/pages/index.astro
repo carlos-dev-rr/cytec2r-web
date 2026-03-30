@@ -4,33 +4,30 @@ import Section from '../components/Section.astro';
 import Activity from "../components/Activity.astro";
 import ServiceCard from '../components/ServiceCard.astro';
 import ListRowWithIcon from '../components/ListRowWithIcon.astro'
-import Hero from '../components/Hero.astro';
+import Hero from '../components/HeroBanners/Hero.astro';
 
 const pageTitle = "Cytec2R";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<Hero />
-	<section class="flex flex-col items-center my-10 mx-6">
+	<section class="flex flex-col items-center my-10">
 		<Section title="Arquitectos de la Excelencia Operativa" subtitle="QUIÉNES SOMOS">
 			<div class="flex flex-wrap justify-center items-center gap-4 lg:flex-row">
 				<!-- <img src="/img/nosotros.jpg" alt="empresarios" class="w-[80%] max-w-[442px] shadow-lg rounded-xl md:max-w-[50%]"> -->
-				<div class="flex flex-col flex-grow max-w-[95%] items-center mt-6 md:max-w-[45%]">
+				<div class="flex flex-col flex-grow max-w-[95%] items-center mt-6 md:max-w-[75%]">
 					<p class="text-justify text-md text- leading-relaxed 
 							sm:text-base
-							lg:text-lg lg:leading-loose
-							xl:text-xl">
+							lg:text-lg lg:leading-loose"
+					>
 						En CYTEC2R, somos una consultora tecnológica especializada en la ejecución de proyectos con 
 						máxima eficacia y precisión. Nos enfocamos en combinar experiencia, innovación y una red global 
 						de profesionales para ofrecer soluciones tecnológicas alineadas con los desafíos del presente y 
 						preparadas para el futuro.
 					</p>
-					<a href="/nosotros/" class="bg-tertiary-blue border-2 border-primary text-neutral-white px-4 py-1 mt-5 cursor-pointer font-bold rounded-full
-									hover:animate-bounceIcon hover:bg-primary-blue hover:text-on-primary-container hover:duration-300
-									sm:text-base
-									lg:text-lg
-									xl:text-xl">
+					<a href="/nosotros/" class="mt-5 primary-gradient text-on-primary font-headline font-bold py-4 px-8 rounded-xl shadow-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 w-full sm:w-auto">
 						Conócenos más
+						<span><i class="fa-solid fa-arrow-right"></i></span>
 					</a>
 				</div>
 			</div>
@@ -52,9 +49,6 @@ const pageTitle = "Cytec2R";
 					title="Mediciones y Rankings"
 					description="Análisis de datos críticos para posicionar su institución en estándares globales." />
 			</section>
-			<script>
-				import '../scripts/observer.js';	
-			</script>
 		</Section>
 		<Section title="El Diferencial Cytec2R" titleColor="text-primary-fixed-dim" backgroundColor="bg-primary">
 			<div class="py-8 my-0 mx-auto flex flex-col items-center w-[90%] gap-10">

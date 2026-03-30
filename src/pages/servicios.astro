@@ -1,22 +1,23 @@
 ---
-import PageTitle from "../components/PageTitle.astro"
+
 import ServiceSection from "../components/ServiceSection.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Card from "../components/Card.astro"
 import IconCard from "../components/IconCard.astro"
+import SectionHero from "../components/heroBanners/SectionHero.astro";
 
 const pageTitle = "Servicios - C2R";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <PageTitle title="Servicios" />
-    <section class="mx-5 mb-15 text-sm text-justify sm:text-base lg:text-xl lg:mx-15">
-        <p>
-            En Cytec2R, ofrecemos soluciones integrales para fortalecer la gestión de calidad hospitalaria y la seguridad del paciente, 
-            alineadas con normativas nacionales e internacionales.
-        </p>
-    </section>
-    <section class="flex flex-col items-center mx-5 lg:mx-15">
+    <SectionHero 
+        title="Nuestros Servicios Integrales" 
+        subtitle="Excelencia Operativa" 
+        description="Ofrecemos soluciones integrales para fortalecer la gestión de calidad hospitalaria y la seguridad del paciente, 
+            alineadas con normativas nacionales e internacionales." 
+        imgPath="/img/servicios_hero_background.webp"
+    />
+    <section class="flex flex-col gap-20 my-10">
         <ServiceSection title="1. Asistencia y Asesoría en Sistemas de Gestión de Calidad Hospitalaria">
             <p>
                 Acompañamos a las instituciones de salud en el desarrollo, implementación y mejora continua de sistemas de gestión de 

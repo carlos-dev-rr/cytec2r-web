@@ -182,26 +182,10 @@ h3,h4, p{
   border-color: var(--color-sky-900);
 }
 
-/* Estilo base para el subrayado (span dentro de li) */
-#nav-links ul li span {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1.5px;
-  background-color: #2563eb; /* Tailwind blue-600 */
-  width: 0;
-  pointer-events: none;
-}
-
-/* Cuando el enlace (a) se hace hover, animamos el span */
-#nav-links ul li:hover span {
-  animation: var(--animate-underlineSlide);
-}
-
 .currentPage{
-    background-color: var(--color-sky-200);
-    border-radius: 5px;
-    font-weight: 700;
+  background-color: var(--color-on-primary-container);
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 @media (max-width: 349px) {

@@ -2,11 +2,11 @@
 const {title, subtitle, backgroundColor, titleColor} = Astro.props;
 ---
 
-<section class={`w-[100dvw] flex flex-col align-middle items-center ${backgroundColor}`}>
-    <div class="max-w-[90%] py-10">
+<section class={`w-full max-w-[100dvw] flex flex-col align-middle items-center ${backgroundColor}`}>
+    <div class="max-w-[90%] py-30">
         <div class="mb-5 lg:mb-15">
-            <h2 class="text-sm text-center text-secondary md:text-2xl">{subtitle}</h2>
-            <h1 class={`text-3xl text-center ${titleColor} font-semibold md:text-6xl lg:text-7xl`}>{title}</h1>
+            <h2 class="text-sm text-center text-secondary md:text-lg">{subtitle}</h2>
+            <h1 class={`text-3xl text-center ${titleColor} font-semibold md:text-5xl`}>{title}</h1>
         </div>
         <slot />
     </div>
