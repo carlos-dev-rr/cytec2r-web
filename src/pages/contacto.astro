@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHero from '../components/HeroBanners/SectionHero.astro';
+import FormInput from '../components/Forms/FormInput.astro';
+const pageTitle = "Contacto - C2R";
+---
+<BaseLayout pageTitle={pageTitle}>
+   <SectionHero 
+        title="Contáctanos" 
+        subtitle="Excelencia Institucional" 
+        description="Estamos aquí para elevar los estándares de seguridad y calidad en su institución médica." 
+        imgPath="/img/contact_hero_background.png" />
+   <!-- Main Content Area -->
+    <section class="max-w-7xl mx-auto px-6 pb-10 -mt-20 relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Contact Form Card -->
+            <div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-2xl shadow-on-surface/5 p-8 md:p-12">
+                <h2 class="font-headline text-2xl font-bold text-primary mb-8">Envíenos un mensaje</h2>
+                <form action="https://formspree.io/f/mdapgwal" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <FormInput 
+                            label="Nombre Completo"
+                            name="fullname"
+                            placeholder="Ej. Carlos Rodriguez" 
+                            required
+                        />
+                        <FormInput 
+                            label="Correo Electrónico" 
+                            name="email" 
+                            type="email" 
+                            placeholder="nombre@ejemplo.com" 
+                            required 
+                        />
+                    </div>
+                    <FormInput 
+                        label="Teléfono de Contacto" 
+                        name="phone" 
+                        type="tel" 
+                        placeholder="+507 6200-0000" 
+                    />
+                    <div class="space-y-2">
+                        <label class="font-label text-[0.7rem] font-semibold text-outline uppercase tracking-wider ml-1">Mensaje</label>
+                        <textarea name="message" class="w-full bg-surface-container-highest border-none rounded-sm px-4 py-3 text-on-surface focus:ring-2 focus:ring-secondary/40 transition-all placeholder:text-outline/50 resize-none" 
+                        placeholder="¿Cómo podemos ayudarle?" 
+                        rows="5"></textarea>
+                    </div>
+
+                    <button class="w-full md:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl hover:scale-105 transition-transform shadow-lg shadow-primary/20 flex items-center justify-center gap-2" type="submit">
+                        Enviar Consulta
+                        <span class=" text-sm"><i class="fa-solid fa-paper-plane"></i></span>
+                    </button>
+                </form>
+            </div>
+            <!-- Info Column -->
+            <div class="lg:col-span-5 space-y-8 lg:pt-25">
+                <!-- Contact Details Card -->
+                <div class="bg-surface-container-low p-8 rounded-xl space-y-8">
+                    <div>
+                        <h3 class="font-headline text-lg font-bold text-primary mb-4 flex items-center gap-3">
+                        <span class=" text-secondary"><i class="fa-solid fa-location-dot"></i></span>
+                            Ubicación
+                        </h3>
+                        <p class="text-on-surface-variant font-medium leading-relaxed">
+                            Praderas del Rocío </br>
+                            Villa Zaita </br>
+                            Ciudad de Panamá </br>
+                            Panamá
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-headline text-lg font-bold text-primary mb-4 flex items-center gap-3">
+                        <span class=" text-secondary"><i class="fa-solid fa-address-book"></i></span>
+                            Canales Directos
+                        </h3>
+                        <ul class="space-y-3">
+                            <!-- <li class="flex items-center gap-3 text-on-surface-variant">
+                            <span class=" text-sm">phone_iphone</span>
+                            <a class="hover:text-secondary transition-colors font-medium" href="tel:+525588889999">+52 55 8888 9999</a>
+                            </li> -->
+                            <li class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="text-sm"><i class="fa-solid fa-envelope"></i></span>
+                                <a class="hover:text-secondary transition-colors font-medium" href="mailto:hazelramos@cytec2r.com">hazelramos@cytec2r.com</a>
+                            </li>
+                            <li class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="text-sm"><i class="fa-solid fa-envelope"></i></span>
+                                <a class="hover:text-secondary transition-colors font-medium" href="mailto:hazelramos@cytec2r.com">carlosrodríguez@cytec2r.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-headline text-lg font-bold text-primary mb-4 flex items-center gap-3">
+                        <span class="text-secondary"><i class="fa-solid fa-share-nodes"></i></span>
+                            Redes Profesionales
+                        </h3>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm" 
+                                href="https://www.instagram.com/cytec2r?igsh=MWxjMzExMjZhbGlweQ==">
+                            <span class="text-xl"><i class="fa-brands fa-instagram"></i></span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm" 
+                                href="https://www.linkedin.com/company/cytec2r/">
+                            <span class="text-xl"><i class="fa-brands fa-linkedin"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

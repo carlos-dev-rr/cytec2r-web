@@ -1,12 +1,27 @@
 ---
-const {title, description, iconClass, iconColor} = Astro.props;
+const {
+    title, 
+    description, 
+    iconClass,
+
+    titleColor="text-neutral-white",
+    descriptionColor="text-primary-fixed-dim",
+    borderColor="border-tertiary-blue", 
+    iconColor,
+
+    titleSize="text-lg",
+    descriptionSize="text-sm",
+    iconSize="",
+
+    titleWeight="font-medium"
+    } = Astro.props;
 ---
 <div class="flex justify-between gap-5">
-    <div class={`flex items-center justify-center ${iconColor} w-[70px] h-[40px] rounded-full border-1 border-tertiary-blue`}>
-        <i class={iconClass}></i>
+    <div class={`flex items-center justify-center ${iconColor} w-[70px] h-[40px] rounded-full border-1 ${borderColor}`}>
+        <i class={`${iconClass} ${iconSize}`}></i>
     </div>
     <div>
-        <h2 class="text-lg text-neutral-white font-medium">{title}</h2>
-        <p class="text-sm text-primary-fixed-dim">{description}</p>
+        <h2 class={`${titleSize} ${titleColor} ${titleWeight}`}>{title}</h2>
+        <p class={`${descriptionSize} ${descriptionColor} text-justify`}>{description}</p>
     </div>
 </div>

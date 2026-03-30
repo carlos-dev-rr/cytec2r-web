@@ -1,54 +1,138 @@
 ---
-import PageTitle from '../components/PageTitle.astro';
-import Persona from '../components/Persona.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHero from "../components/HeroBanners/SectionHero.astro";
+import Persona from "../components/Persona.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ValuesColumn from "../components/ValuesColumn.astro";
 const pageTitle = "Nosotros - C2R";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-   <PageTitle title="Conoce Nuestro Equipo" />
-   <section>
-      <Persona name="Carlos Alberto Rodriguez Patiño" rol="Co-fundador" url="https://www.linkedin.com/in/carlos-aberto-rodriguez-2320a936/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-            <img src="/img/persona1.jpg" alt="empresario-1" slot="img" class="w-full rounded-xl shadow-md shadow-GunmetalGray">
-            <p slot="description">
-               Carlos A. Rodríguez P. es Ingeniero en Informática por la Universidad de Panamá, con una Maestría en Dirección de Negocios 
-               con Especialización en Estrategias Gerenciales y un Postgrado en Alta Gerencia por la Universidad Tecnológica de Panamá. 
-               Su formación se complementa con un Postgrado en Docencia Superior y una especialización internacional en Gobierno Electrónico 
-               cursada en Corea del Sur.
-            </p>
-            <p slot="description">
-               Ha ocupado cargos estratégicos en el sector público y académico, destacándose como Director Ejecutivo Nacional de Innovación y 
-               Transformación en la Caja de Seguro Social, Coordinador de Innovación en el Ministerio de Educación, y Director de Informática en 
-               la Universidad de Panamá. También ha sido consultor para la Embajada de los Estados Unidos (NAS) y ha liderado áreas tecnológicas 
-               en instituciones como la Procuraduría de la Administración y la Secretaría del Consejo Nacional de Transparencia.
-            </p>
-            <p slot="description">
-               Su compromiso con la innovación y la gestión pública ha sido reconocido oficialmente mediante la Resolución N°.084-01 del 31 de 
-               julio de 2001, por su participación en la elaboración y divulgación de la Ley 38 de julio de 2000.
-            </p>
-         </Persona>
-         <Persona name="Hazel Nynoschka Ramos Thomas" rol="Co-fundadora" url="https://www.linkedin.com/in/hazel-ramos-healthcare-quality/">
-            <img src="/img/persona2.jpg" alt="empresario-2" slot="img" class="w-full rounded-xl shadow-md shadow-GunmetalGray">
-            <p slot="description">
-               Hazel N. Ramos Thomas es una enfermera con una trayectoria destacada en gestión de calidad, liderazgo clínico y docencia. 
-               Egresada de la Universidad de Panamá como Licenciada en Ciencias de la Enfermería, ha complementado su formación con una 
-               Maestría en Dirección de Negocios con énfasis en Estrategias Gerenciales, dos postgrados (en Alta Gerencia y Docencia Superior) 
-               y una especialización como enfermera quirúrgica.
-            </p>
-            <p slot="description">
-               Cuenta con múltiples certificaciones internacionales en normas ISO, Lean Six Sigma, auditoría clínica, seguridad del paciente y 
-               gestión de riesgos.
-            </p>
-            <p slot="description">
-               A lo largo de más de dos décadas de experiencia, ha liderado iniciativas de alto impacto en instituciones públicas y privadas. 
-               Fue Sub-Coordinadora Nacional de Gestión de Calidad en la Caja de Seguro Social, donde diseñó e implementó normas de seguridad 
-               quirúrgica, sistemas de reporte de eventos adversos y procesos clave para la acreditación hospitalaria. Su experiencia también 
-               incluye consultorías en estándares internacionales de calidad, gestión de quirófanos y diseño de indicadores clínicos.
-            </p>
-            <p slot="description">
-               Además de su rol como gestora, ha sido formadora y docente en universidades e instituciones de salud, promoviendo la mejora continua 
-               a través de la educación, la auditoría y la implementación de protocolos clínicos.
-            </p>
-         </Persona>
-   </section>
-   
+  <SectionHero
+    title="Quiénes Somos"
+    subtitle="SOBRE NOSOTROS"
+    description="Líderes en consultoría estratégica para la excelencia clínica y la seguridad del paciente."
+    imgPath="/img/nosotros_hero_background.png"
+  />
+
+  <!-- Philosophy Section (Asymmetric Editorial Style) -->
+  <section class="pt-25 pb-10 bg-surface">
+    <div class="px-6">
+      <div
+        class="bg-surface-container-lowest p-8 rounded-xl shadow-sm relative z-20 -mt-16 asymmetric-offset"
+      >
+        <h2 class="font-headline text-primary text-2xl font-bold mb-4">
+          Nuestra Filosofía
+        </h2>
+        <p class="text-on-surface-variant leading-relaxed text-lg text-justify">
+          En Cytec2R, entendemos que la precisión no es solo un objetivo
+          técnico, sino un compromiso ético. Nuestra metodología integra el
+          rigor científico con una visión humana, transformando la gestión
+          hospitalaria en un ecosistema de alta fiabilidad donde cada proceso
+          está diseñado para proteger la vida.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Mission, Vision, Values (Bento Grid Inspired) -->
+  <section class="py-12 bg-surface-container-low px-6 flex flex-wrap gap-5 justify-center">
+    <div class="flex flex-col gap-5 md:max-w-[45%]">
+      <!-- Misión -->
+      <div
+        class="bg-surface-container-lowest p-8 rounded-xl flex flex-col gap-4"
+      >
+        <div
+          class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center"
+        >
+          <span
+            class="text-secondary"
+            style="font-variation-settings: 'FILL' 1;"
+            ><i class="fa-solid fa-bullseye"></i></span
+          >
+        </div>
+        <h3 class="font-headline text-xl font-bold text-primary">Misión</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed text-justify">
+          Empresa que ofrece servicios de consultoría, docencia investigación a
+          nivel empresarial, y productos de Tecnología de Información y
+          Comunicaciones de calidad, en forma ética y transparente, con el mejor
+          capital humano y los recursos tecnológicos, que permiten a nuestros
+          clientes lograr sus objetivos.
+        </p>
+      </div>
+      <!-- Visión -->
+      <div class="bg-primary p-8 rounded-xl flex flex-col gap-4 text-white">
+        <div
+          class="w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center"
+        >
+          <span class="text-white"><i class="fa-solid fa-eye"></i></span>
+        </div>
+        <h3 class="font-headline text-xl font-bold">Visión</h3>
+        <p class="text-primary-fixed-dim text-sm leading-relaxed text-justify">
+          Ser una de las mejores empresas en consultoría, docencia investigación
+          a nivel empresarial, en Tecnología de Información y Comunicaciones, en
+          el ámbito nacional e internacional, a través de la calidad e impacto
+          de sus resultados.
+        </p>
+      </div>
+    </div>
+    <!-- Valores -->
+     <div class="md:max-w-[45%]">
+         <ValuesColumn />
+     </div>
+    
+  </section>
+  <!-- Team Section -->
+  <section class="py-20 bg-surface-container-low overflow-hidden">
+    <div class="px-6 mb-10 text-center">
+      <h2 class="font-headline text-primary text-3xl font-extrabold">
+        Liderazgo
+      </h2>
+      <p class="text-on-surface-variant mt-2">
+        Expertos comprometidos con la excelencia institucional.
+      </p>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-10">
+      <Persona
+        name="Carlos Alberto Rodriguez Patiño"
+        rol="Co-fundador"
+        rolDescription="Estratega en la transformación digital de organizaciones, especializado en la implementación de sistemas de información clínica
+         de alta complejidad. Su enfoque combina la coordinación de talento distribuido con herramientas colaborativas de vanguardia para garantizar la precisión
+          y eficacia en cada proyecto tecnológico."
+        linkedinUrl="https://www.linkedin.com/in/carlos-aberto-rodriguez-2320a936/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        imgPath="/img/persona1.jpg"
+      />
+      <Persona
+        name="Hazel Nynoschka Ramos Thomas"
+        rol="Co-fundadora"
+        rolDescription="Experta en el diseño y supervisión de estándares de calidad hospitalaria. 
+        Su gestión se centra en la optimización de procesos críticos y la seguridad del paciente, 
+        asegurando que la consultoría estratégica de CYTEC2R traduzca la innovación técnica en resultados
+        seguros, humanos y de alto impacto para las instituciones de salud."
+        linkedinUrl="https://www.linkedin.com/in/hazel-ramos-healthcare-quality/"
+        imgPath="/img/persona2.jpg"
+      />
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 px-6 text-center">
+    <div
+      class="bg-white p-10 rounded-2xl shadow-xl shadow-on-surface/5 flex flex-col items-center gap-6 border border-outline-variant/10"
+    >
+      <h2 class="font-headline text-2xl font-bold text-primary">
+        ¿Listo para transformar su institución?
+      </h2>
+      <p class="text-on-surface-variant">
+        Conozca cómo nuestra metodología de precisión puede elevar sus
+        estándares.
+      </p>
+      <a
+        href="/contacto/"
+        class="bg-primary hover:scale-105 transition-transform px-8 py-4 rounded-xl text-white font-bold flex items-center gap-2"
+      >
+        Contactar Consultor
+        <span class="text-sm"><i class="fa-solid fa-arrow-right-long"></i></span
+        >
+      </a>
+    </div>
+  </section>
 </BaseLayout>

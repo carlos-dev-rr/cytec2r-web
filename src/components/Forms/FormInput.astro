@@ -1,0 +1,17 @@
+---
+const {label, name, placeholder, type="text", required=false} = Astro.props;
+const inputId = `input-${name}`;
+---
+<div class="space-y-2">
+    <label for={inputId}  class="font-label text-[0.7rem] font-semibold text-outline uppercase tracking-wider ml-1">
+        {label} {required && <span class="text-error">*</span>}
+    </label>
+    <input
+        id={inputId} 
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        class="w-full bg-surface-container-highest border-none rounded-sm px-4 py-3 text-on-surface focus:ring-2 focus:ring-secondary/40 transition-all placeholder:text-outline/50" 
+    />
+</div>

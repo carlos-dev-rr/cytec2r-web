@@ -1,19 +1,27 @@
 ---
-const {name, rol, url} = Astro.props;
+const { name, rol, rolDescription, linkedinUrl, imgPath } = Astro.props;
 ---
-<section class="flex flex-wrap justify-center gap-5 mt-20 mb-30 sm:gap-10">
-    <div class="flex flex-col items-center gap-2 w-[65%] max-w-[228px] ">
-        <slot name="img" />
-        <div class="flex flex-col items-center">
-        <h4 class="text-2xl text-center font-bold text-GunmetalGray">{name}</h4>
-        <h5>{rol}</h5>
-        </div>
-        <a href={url}><i class="fa-brands fa-linkedin text-PrussianBlue text-3xl animate-bounce hover:animate-shake"></i></a>
-    </div>
-    <div class="flex flex-col grow items-center gap-5 text-sm text-GunmetalGray text-justify w-[80%] max-w-[400px] mx-5
-                sm:max-w-[45%]
-                md:text-base
-                xl:text-lg">
-        <slot name="description">
-    </div>
+
+<section
+  class="w-[350px] snap-center bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm pb-5"
+>
+  {
+    imgPath && (
+      <img class="w-full h-84 object-cover object-top" data-alt="" src={imgPath} />
+    )
+  }
+  <div class="p-6">
+    <h4 class="text-center font-headline font-bold text-primary text-xl">{name}</h4>
+    <span class="text-center text-secondary font-medium text-sm uppercase tracking-wider block mb-4">{rol}</span>
+    <p class="text-justify text-on-surface-variant text-sm leading-relaxed">
+        {rolDescription}
+    </p>
+  </div>
+
+  <a
+    class="my-0 mx-auto w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all shadow-sm"
+    href={linkedinUrl}
+  >
+    <span class="text-2xl"><i class="fa-brands fa-linkedin"></i></span>
+  </a>
 </section>
